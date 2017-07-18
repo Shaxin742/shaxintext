@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+</head>
+	<script>
+		window.onload = function() {
+			var clock = document.getElementById('clock');
+			var p = document.querySelector('p');
+			var color = ['red', 'green', 'yellow', 'blue', 'black', 'gold', 'orange', 'gray', 'pink', 'maroon']; //钟表颜色数组
+			setInterval(function() {
+				var now = new Date();
+				clock.innerHTML = now.getFullYear() + '年' + (now.getMonth() + 1) + '月' + now.getDate() + '日' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+				var radom = Math.floor(Math.random() * color.length + 1) - 1; //随机数
+				p.innerHTML= radom;
+				clock.style.color = color[radom]; //设置随机颜色
+			}, 1000)
+		}
+	</script>
+
+	<body>
+		<span id="clock" style="font-size:20px;"></span>
+		<p></p>
+	</body>
+
+</html>

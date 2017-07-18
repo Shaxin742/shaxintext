@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			input: focus {
+				border: none;
+			}
+			
+			;
+			.no {
+				display: none;
+			}
+		</style>
+	</head>
+	<link rel="stylesheet" href="../css/common.css" />
+	<link rel="stylesheet" href="../css/table.css" />
+	<!--<link rel="stylesheet" href="../css/jquery.datetimepicker.css" />-->
+	<link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../css/bootstrap-switch.min.css" />
+	<link rel="stylesheet" href="../css/form.css" />
+	<script src="../js/jquery-3.2.0.min.js"></script>
+	<script src="../js/index.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap-switch.min.js"></script>
+	<!--<script src="../js/jquery.datetimepicker.min.js"></script>-->
+	<script>
+		//		$('#datepicker').datetimepicker({
+		//			lang: 'ch'
+		//		});
+		$("[name='my-checkbox']").bootstrapSwitch();
+	</script>
+
+	<body>
+		<header>
+			<div class="headerLeft">Admin</div>
+			<div class="headerRight">
+				<i class="fa fa-table" aria-hidden="true"></i>
+				<div class="headerUser">
+					<p>马大龙</p>
+					<img src="assets/img/user.png" />
+					<ul class="userMessage">
+						<li>我的消息</li>
+						<li style="border-bottom: 1px solid #000000;">设置</li>
+						<li>退出登录</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div id="main">
+			<style>
+				.child {
+					display: none;
+				}
+			</style>
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>导航一</a>
+						<ul class="child">
+							<li>
+								<a href="/">Table</a>
+							</li>
+							<li>
+								<a href="html/form.html">Form</a>
+							</li>
+							<li>
+								<a href="html/list.html">列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-address-card"></i>导航二</a>
+						<ul class="child">
+							<li>
+								<a href="#">页面4</a>
+							</li>
+							<li>
+								<a href="#">页面5</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-address-card-o"></i>导航三</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i>Charts</a>
+						<ul class="child">
+							<li>
+								<a href="#">echarts</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div id="form">
+				<h2>
+				<p>Form</p>
+				<p>导航一<span>/Form</span></p>
+			</h2>
+				<div>活动名称<input type="text" /></div>
+				<div>活动区域
+					<select name="" id="">
+						<option value="s">区域1</option>
+						<option value="s">区域2</option>
+					</select>
+				</div>
+				<div>活动时间
+					<input id="datepicker" type="text" /><input id="timepicker" type="text" />
+				</div>
+				<div>即时配送
+					<!--<div>
+					<div class="switch">
+						<input type="checkbox" name="my-checkbox" checked>
+					</div>
+				</div>-->
+				</div>
+				<div>活动性质
+					<h3><input type="checkbox" />&nbsp;美食/餐厅线上活动</h3>
+					<h3><input type="checkbox" />&nbsp;地推活动</h3>
+					<h3><input type="checkbox" />&nbsp;线下主题活动</h3>
+					<h3><input type="checkbox" />&nbsp;单纯品牌曝光</h3>
+				</div>
+				<div>特殊资源
+					<h3><input type="radio" name="up"/>线上品牌商赞助</h3>
+					<h3><input type="radio" name="up"/>线下场地面免费</h3>
+				</div>
+				<div>
+					活动形式
+					<textarea name="" rows="2" cols="20"></textarea>
+				</div>
+				<button class="btn1">立即创建</button>
+				<button class="btn2">取消</button>
+				</section>
+			</div>
+	</body>
+
+</html>

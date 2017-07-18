@@ -1,0 +1,121 @@
+<!DOCTYPE>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jQuery多级下拉菜单</title>
+		<script src="../public/js/jquery-3.2.0.min.js"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul,
+			li {
+				list-style: none;
+				font-size: 12px;
+				line-height: 55px;
+				width: 80px;
+				margin: 0;
+				/*padding-left: 6px;*/
+			}
+			
+			.child a,
+			li a {
+				background: cornflowerblue;
+				display: block;
+			}
+			
+			li {
+				background: cornflowerblue;
+			}
+			
+			li:hover {
+				background: yellow;
+			}
+			
+			a:hover {
+				background: yellow;
+			}
+			
+			.child {
+				display: none;
+			}
+			/*.nav a {
+				display: block;
+				color: #5c84c1;
+				padding-left: 22px;
+			}*/
+			.onNav {
+				font-weight: bold;
+				color: #20a0ff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="#">导航一</a>
+					<ul class="child">
+						<li>
+							<a href="#">Table</a>
+						</li>
+						<li>
+							<a href="#">Form</a>
+						</li>
+						<li>
+							<a href="#">列表</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">导航二</a>
+					<ul class="child">
+						<li>
+							<a href="#">页面4</a>
+						</li>
+						<li>
+							<a href="#">页面5</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">导航三</a>
+					<ul class="child">
+						<li>
+							<a href="#">二级菜单1</a>
+						</li>
+						<li>
+							<a href="#">二级菜单1</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		$(document).ready(function() {
+			$(".nav").find("li:has(ul)").children("a")
+				.click(function() {
+					if($(this).next("ul").is(":hidden")) {
+						$(this).next("ul").slideDown("slow");
+						if($(this).parent("li").siblings("li").children("ul").is(":visible")) {
+							$(this).parent("li").siblings("li").find("ul").slideUp("1000");
+						}
+					} else {
+						$(this).next("ul").slideUp("normal");
+						$(this).next("ul").children("li").find("ul").fadeOut("normal");
+					}
+				});
+			$(".nav li a").click(function(){
+				if($(this).has(".onNav")){
+					$(this).addClass("onNav").parent("li").siblings("li").find("a").removeClass("onNav")
+				}
+			})
+		});
+	</script>
+
+</html>

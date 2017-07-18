@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="vue.js"></script>
+
+	<body>
+		<div id="zj">
+			<mu-c></mu-c>
+		</div>
+		<script>
+			Vue.component('mu-c', {
+				template: '<div>hsjdisdjis</div>'
+			})
+			var vm = new Vue({
+				el: "#zj"
+			})
+		</script>
+		<div id="zj2">
+			<mu-v></mu-v>
+		</div>
+		<script>
+			var Child = {
+				template: '<div>sdsd</div>'
+			}
+			new Vue({
+				el: "#zj2",
+				components: {
+					'mu-v': Child
+				}
+			})
+		</script>
+		<div id="zj3">
+			<sim-counter></sim-counter>
+		</div>
+		<script>
+			var data = {
+				counter: 0
+			}
+			Vue.component("sim-counter", {
+				template: '<button v-on:click="counter += 1">{{counter}}</button>',
+				data: function() {
+					return data
+				}
+			})
+			new Vue({
+				el: '#zj3'
+			})
+		</script>
+	</body>
+
+</html>

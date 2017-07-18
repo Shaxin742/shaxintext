@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8" /> 
+<title>JS实现div居中</title> 
+<style> 
+/*外层div居中*/ 
+#main { 
+position: absolute; /*极为重要*/ 
+background-color: blue; 
+width:400px; 
+height:200px; 
+/*left:50%; 
+top:50%; 
+margin-left:-200px; 
+margin-top:-100px;*/ 
+border:1px solid #00F; 
+} 
+
+#content { 
+position: absolute; /*极为重要*/ 
+background-color: yellow; 
+width: 200px; 
+height: 100px; 
+/*left:50%; 
+top:50%; 
+margin-left:-100px; 
+margin-top:-50px;*/ 
+
+/*div内部文字居中*/ 
+text-align: center; 
+line-height:100px; /*行间距和div宽度相同*/ 
+} 
+</style> 
+<body> 
+<div id="main"> 
+<div id="content"> 
+Sun 
+</div> 
+</div> 
+<script type="text/javascript"> 
+window.onload = function() { 
+// 获取浏览器窗口 
+var windowScreen = document.documentElement; 
+// 获取main的div元素 
+var main_div = document.getElementById("main"); 
+// 通过窗口宽高和div宽高计算位置 
+var main_left = (windowScreen.clientWidth - main_div.clientWidth)/2 + "px"; 
+var main_top = (windowScreen.clientHeight - main_div.clientHeight)/2 + "px"; 
+// 位置赋值 
+main_div.style.left = main_left; 
+main_div.style.top = main_top; 
+
+// 获取mcontent的div元素 
+var content_div = document.getElementById("content"); 
+var content_left = (main_div.clientWidth - content_div.clientWidth)/2 + "px"; 
+var content_top = (main_div.clientHeight - content_div.clientHeight)/2 + "px"; 
+content_div.style.left = content_left; 
+content_div.style.top = content_top; 
+
+} 
+</script> 
+</body> 
+</html> 

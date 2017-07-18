@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>CSS+JavaScript三级折叠菜单</title>
+		<style>
+			*,
+			body,
+			ul,
+			li,
+			h1,
+			h2 {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			body {
+				font: 12px "宋体";
+				padding-top: 20px;
+			}
+			
+			#menu {
+				width: 200px;
+				margin: auto;
+			}
+			
+			#menu h1 {
+				cursor: pointer;
+				color: #FFF;
+				font-size: 12px;
+				padding: 5px 0 3px 10px;
+				border: #C60 1px solid;
+				margin-top: 1px;
+				background-color: #F93;
+			}
+			
+			#menu h2 {
+				cursor: pointer;
+				color: #777;
+				font-size: 12px;
+				padding: 5px 0 3px 10px;
+				border: #E7E7E7 1px solid;
+				border-top-color: #FFF;
+				background-color: #F4F4F4;
+			}
+			
+			.no {
+				display: none;
+			}
+		</style>
+		<script>
+			function ShowMenu(obj, noid) {
+				var block = document.getElementById(noid);
+				var n = noid.substr(noid.length - 1);
+				if(noid.length == 4) {
+					var h2 = document.getElementById(noid.substring(0, 3)).getElementsByTagName("h2");
+					for(var i = 0; i < h2.length; i++) {
+						h2[i].style.color = "";
+					}
+				} else {
+					var span = document.getElementById("menu").getElementsByTagName("span");
+					var h1 = document.getElementById("menu").getElementsByTagName("h1");
+					for(var i = 0; i < h1.length; i++) {
+						h1[i].style.color = "";
+					}
+					for(var i = 0; i < span.length; i++) {
+						if(i != n) {
+							span[i].className = "no";
+						}
+					}
+				}
+				if(block.className == "no") {
+					block.className = "";
+				} else {
+					block.className = "no";
+					obj.style.color = "";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="menu">
+			<h1 onClick="ShowMenu(this,'NO0')">一级菜单A</h1>
+			<span id="NO0" class="no">
+   				<h2 onClick="ShowMenu(this,'NO00')">一级菜单A_1</h2>
+   
+   				<h2 onClick="ShowMenu(this,'NO01')">一级菜单A_2</h2>
+   
+   				<h2 onClick="ShowMenu(this,'NO02')">一级菜单A_3</h2>
+   
+   				<h2 onClick="ShowMenu(this,'NO03')">一级菜单A_4</h2>
+   
+			</span>
+			<h1 onClick="ShowMenu(this,'NO1')">二级菜单B</h1>
+			<span id="NO1" class="no">
+   <h2 onClick="ShowMenu(this,'NO10')">二级菜单B_1</h2>
+   <h2 onClick="ShowMenu(this,'NO11')">二级菜单B_2</h2>
+</span>
+			<h1 onClick="ShowMenu(this,'NO2')">三级菜单C</h1>
+			<span id="NO2" class="no">
+   <h2 onClick="ShowMenu(this,'NO20')">三级菜单C_1</h2>
+   <h2 onClick="ShowMenu(this,'NO21')">三级菜单C_2</h2> 
+</span>
+			<h1 onClick="ShowMenu(this,'NO3')">四级菜单D</h1>
+			<span id="NO3" class="no">
+   <h2 onClick="ShowMenu(this,'NO30')">四级菜单D_1</h2>  
+   <h2 onClick="ShowMenu(this,'NO31')">四级菜单D_2</h2>
+</span>
+		</div>
+	</body>
+
+</html>

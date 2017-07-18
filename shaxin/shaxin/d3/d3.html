@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<body>
+		<p>p1</p>
+		<p>p2</p>
+	</body>
+	<script>
+//		var p =d3.select("body").selectAll("p").text("sd")
+//		p.style("color","red")
+
+//		var str = "chi"
+//		var p = d3.select("body").selectAll("p")
+//		p.datum(str)
+//		p.text(function(d,i){
+//			return "第"+i+"个"+ d
+//		})
+
+		var dataset = ["i",'U',"she"]
+		var p = d3.select("body").selectAll("p")
+		p.data(dataset)
+		.text(function(d,i){
+			return "第"+i+"个"+ d
+		})
+	</script>
+</html>

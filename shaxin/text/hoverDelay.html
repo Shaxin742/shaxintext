@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="sosoFod">
+			<h3 id="sosoweb" class="s1">网页</h3>
+			<h3 id="sosoimg" class="s2">图片</h3>
+			<h3 id="sosovid" class="s2">视频</h3>
+			<h3 id="sosomus" class="s2">音乐</h3>
+			<h3 id="sososoba" class="s2">搜吧</h3>
+			<h3 id="sosowenwen" class="s2">问问</h3>
+			<h3 id="sosoqz" class="s2">博客</h3>
+			<h3 style="cursor:pointer;" class="s2">更多▼
+        <div style="display:none;" class="more" id="tm">
+          <ul>
+            <li><a href="#">综合</a></li>
+            <li><a href="#">新闻</a></li>  
+            <li><a href="#">词典</a></li>
+            <li><a href="#">生活</a></li>
+            <li><a href="#">百科</a></li>
+            <li style="border-top:1px solid rgb(178, 208, 234);"><a href="#">所有产品</a></li>
+          </ul>
+       </div>
+    </h3>
+		</div>
+	</body>
+	<script src="public/js/jquery-3.2.0.min.js"></script>
+	<script>
+		// by zhangxinxu welcome to visit my personal website http://www.zhangxinxu.com
+// 鼠标延迟执行方法
+// 2010-06-30
+// 2010-09-21 绑定当前对象
+
+(function($){
+    $.fn.hoverDelay = function(options){
+        var defaults = {
+            hoverDuring: 200,
+            outDuring: 200,
+//          transtion:all 1s,
+            hoverEvent: function(){
+                $.noop();
+            },
+            outEvent: function(){
+                $.noop();    
+            }
+        };
+        var sets = $.extend(defaults,options || {});
+        var hoverTimer, outTimer, that = this;
+        return $(this).each(function(){
+            $(this).hover(function(){
+                clearTimeout(outTimer);
+                hoverTimer = setTimeout(function(){sets.hoverEvent.apply(that)}, sets.hoverDuring);
+            },function(){
+                clearTimeout(hoverTimer);
+                outTimer = setTimeout(function(){sets.outEvent.apply(that)}, sets.outDuring);
+            });    
+        });
+    }      
+})(jQuery);
+		$(".s2").each(function() {
+					$("#sosoFod h3").each(function() {
+						var that = $(this);
+						var id = that.attr("id");
+						if(id) {
+							that.hoverDelay({
+								hoverEvent: function() {
+									$(".s1").attr("class", "s2");
+									that.attr("class", "s1"); //感谢“type23”提供了绑定对象方法
+									$(this).attr("class", "s1");
+								}
+							})
+						} else {
+							that.hoverDelay({
+								outDuring: 1000,
+								hoverEvent: function() {
+									$("#tm").show();
+								},
+								outEvent: function() {
+									$("#tm").hide();
+								}
+							})
+						}
+					})
+				})
+	</script>
+
+</html>

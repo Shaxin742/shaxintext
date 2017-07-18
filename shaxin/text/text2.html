@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		div{
+			height: 200px;
+			font-size: 20px;
+			color: red;
+			/*background: black;*/
+		}
+		ul{
+			display: none;
+			transition: all 2s;
+		}
+		ul li{
+			height: 30px;
+			font-size: 30px;
+			color: blue;
+			z-index: 200;
+		}
+		/*div:hover ul{
+			display: block;
+		}*/
+		.djd{
+			display: block;
+			transition: all 2s;
+		}
+	</style>
+	<body>
+		<div>
+			啊哈哈哈哈哈
+			<ul>
+				<li>1</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</div>
+	</body>
+	<script src="public/js/jquery-3.2.0.min.js"></script>
+	<script>
+		$("div").click(function(){
+//			alert("sd")
+			$("ul").addClass("djd")
+			$("ul").css("display:block")
+		})
+	</script>
+</html>

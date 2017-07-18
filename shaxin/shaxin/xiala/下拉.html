@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/xiala.css" />
+	<link rel="stylesheet" href="../vue/animate.css" />
+	<body>
+		<div id="menu">
+			<div onclick="showMenu(this,'NO0')">导航1
+				<h2 id="NO0" class="no">
+					<a onclick="showMenu(this,'NO00')">Table</a>
+					<a onclick="showMenu(this,'NO01')">Form</a>
+					<a onclick="showMenu(this,'NO02')">列表</a>
+				</h2>
+			</div>
+			<div onclick="showMenu(this,'NO1')" style="cursor: pointer;">导航2
+				<h2 id="NO1" class="no">
+					<a onclick="showMenu(this,'NO10')">5<a>
+					<a onclick="showMenu(this,'NO11')">6</a>
+					<a onclick="showMenu(this,'NO12')">7</a>
+					<a onclick="showMenu(this,'NO13')">8<a>
+				</h2>
+			</div>
+		</div>
+		<script>
+			function showMenu(obj, noid) {
+				var block = document.getElementById(noid);
+				var n = noid.substr(noid.length - 1);
+				if(noid.length == 4) {
+					var a = document.getElementById(noid.substring(0, 3)).getElementsByTagName("a")
+					for(var i = 0; i < li.length; i++) {
+						a[i].style.color = "";
+					}
+				} else {
+					var h2 = document.getElementById("menu").getElementsByTagName("h2")
+					var div = document.getElementById("menu").getElementsByTagName("div");
+					for(var i = 0; i < div.length; i++) {
+						div[i].style.color = "";
+					}
+					for(var i = 0; i < h2.length; i++) {
+						if(i != n) {
+							h2[i].className = "no";
+						}
+					}
+				}
+				if(block.className == "no") {
+					block.className = "";
+					
+				} else {
+					block.className = "no";
+					obj.style.color = "";
+				}
+			}
+		</script>
+	</body>
+
+</html>

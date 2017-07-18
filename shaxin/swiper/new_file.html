@@ -1,0 +1,2398 @@
+{template 'header-index'}
+
+</head>
+
+<body>
+
+	<!-- 广告代码 -->
+
+	<script type="text/javascript">
+		var TIME_BEFORE_LOAD_CRYSTAL = (new Date).getTime();
+	</script>
+
+	<script src="{DT_SKIN}js/index/crystal-min.js" id="l_qq_com" arguments="{'extension_js_src':'http://ra.gtimg.com/web/crystal/v2.8Beta07Build071/crystal_ext-min.js', 'jsProfileOpen':'false', 'mo_page_ratio':'0.01', 'mo_ping_ratio':'0.01', 'mo_ping_script':'//ra.gtimg.com/sc/mo_ping-min.js'}"></script>
+	<script type="text/javascript">
+		if(typeof crystal === 'undefined' && Math.random() <= 1) {
+
+			(function() {
+
+				var TIME_AFTER_LOAD_CRYSTAL = (new Date).getTime();
+
+				var img = new Image(1, 1);
+
+				img.src = "http://dp3.qq.com/qqcom/?adb=1&dm=edu&err=1002&blockjs=" + (TIME_AFTER_LOAD_CRYSTAL - TIME_BEFORE_LOAD_CRYSTAL);
+
+			})();
+		}
+	</script>
+
+	<style>
+		.absolute {
+			position: absolute;
+		}
+	</style>
+
+	<div class="edu-bd" id="edu-body">
+
+		<!-- 左栏 -->
+
+		<div class="edu-col-left">
+
+			<!-- 焦点图 -->
+
+			<link rel="stylesheet" href="http://jyzz.dlwanglong.cn/skin/jiaoyuz/js/index/swiper-3.4.2.min.css" />
+
+			<script type="text/javascript" src="http://jyzz.dlwanglong.cn/skin/jiaoyuz/js/index/swiper-3.4.2.min.js"></script>
+
+			<style>
+				.swiper-container1 {
+					height: 400px
+				}
+				
+				.swiper-container1 .col-left {
+					float: left;
+					height: 400px;
+					width: 340px;
+					padding-left: 26px;
+					margin-right: 10px;
+				}
+				
+				.swiper-container1 .swiper-slide .col-left .title {
+					padding: 30px;
+					margin-top: 40px;
+					line-height: 30px;
+					border-bottom: 1px dashed #666;
+				}
+				
+				.swiper-container1 .swiper-slide .col-left .abstract {
+					margin-top: 30px;
+					margin: 10px;
+				}
+				
+				.swiper-container1 .col-right {
+					float: left;
+					margin-top: 20px;
+				}
+				
+				.swiper-container1 .col-right img {
+					width: 506px;
+				}
+			</style>
+
+			<div class="swiper-container swiper-container1">
+
+				<!--{php $tags=tag("moduleid=21&length=30&condition=status=3 and level=2&pagesize=4&order=addtime desc&template=null");}-->
+
+				<div class="swiper-wrapper">
+
+					{loop $tags $i $t}
+
+					<div class="swiper-slide">
+
+						<div class="col-left">
+
+							<div class="title">
+
+								<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+							</div>
+
+							<div class="abstract">
+
+								<a href="{$t[linkurl]}" target="_blank">{dsubstr($t[introduce], 180, '...')}</a>
+
+							</div>
+
+						</div>
+
+						<a class="col-right" href="{$t[linkurl]}" target="_blank">
+
+							<img src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}">
+
+						</a>
+
+					</div>
+
+					{/loop}
+
+				</div>
+
+				<div class="swiper-pagination"></div>
+
+				<div class="swiper-button-prev"></div>
+
+				<div class="swiper-button-next"></div>
+
+			</div>
+
+			<script>
+				var mySwiper = new Swiper('.swiper-container', {
+
+					pagination: '.pagination',
+
+					loop: true,
+
+					pagination: '.swiper-pagination',
+
+					nextButton: '.swiper-button-next',
+
+					prevButton: '.swiper-button-prev',
+
+					grabCursor: true,
+
+					paginationClickable: true,
+
+					autoplay: 3000
+
+				})
+			</script>
+
+			<!-- 图片广告 -->
+
+			<ul id="edu-focus-ad" data-boss="edu_tad">
+
+				<li class="item first"> <img src="/skin/jiaoyuz/image/index/144357170.jpg" title="高考志愿填报讲座" /> </li>
+
+				<li class="item second"> <img src="/skin/jiaoyuz/image/index/144243798.jpg" title="高校信息库" /> </li>
+
+				<li class="item"> <img src="/skin/jiaoyuz/image/index/144058154.png" title="剑南春·金剑南 状元宴状元选" /> </li>
+
+			</ul>
+
+			<!-- 左栏目 -->
+
+			<div class="edu-col-left-left" id="edu-origin">
+
+				<div class="pic-block">
+
+					<!-- 图解教育 -->
+
+					<div class="block pic-edu">
+
+						<div class="header"></div>
+
+						<ul class="list">
+
+							<!--{php $tags=tag("moduleid=21&condition=status=3 and level=0&pagesize=10&order=addtime desc&template=null");}-->
+
+							{loop $tags $i $t}
+
+							<li class="item{if $i==0} on{else}{/if}">
+
+								<div class="title">
+
+									<div class="pointer"></div>
+
+									<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+								</div>
+
+								<a href="{$t[linkurl]}" target="_blank">
+
+									<img class="image" src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}">
+
+								</a>
+
+							</li>
+
+							{/loop}
+
+						</ul>
+
+					</div>
+
+					<!--b940fe456a6e98d7423389c2de025f16-->
+
+					<!--[if !IE]>|xGv00|f6b0bfe6b44ce35579f1569d647661b7<![endif]-->
+
+					<!-- 图话校园 -->
+
+					<div class="block pic-campus" data-boss="edu_thxy">
+
+						<div class="header"></div>
+
+						<ul class="list">
+
+							<!--{php $tags=tag("moduleid=21&catid=471&condition=status=3 and level=0&pagesize=3&datetype=2&order=addtime desc&template=null");}-->
+
+							{loop $tags $i $t}
+
+							<li class="item{if $i==0} on{else}{/if}">
+
+								<div class="title">
+
+									<div class="pointer"></div>
+
+									<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+								</div>
+
+								<a href="{$t[linkurl]}" target="_blank">
+
+									<img class="image" src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}">
+
+								</a>
+
+							</li>
+
+							{/loop}
+
+						</ul>
+
+					</div>
+
+					<div class="block pic-parents">
+
+						<div class="header"></div>
+
+						<ul class="list">
+
+							<!--{php $tags=tag("moduleid=21&condition=status=3 and level=0&pagesize=10&order=addtime desc&template=null");}-->
+
+							{loop $tags $i $t}
+
+							<li class="item{if $i==0} on{else}{/if}">
+
+								<div class="title">
+
+									<div class="pointer"></div>
+
+									<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+								</div>
+
+								<a href="{$t[linkurl]}" target="_blank">
+
+									<img class="image" src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}">
+
+								</a>
+
+							</li>
+
+							{/loop}
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 右栏 -->
+
+			<div class="edu-col-left-right" style="margin-right: 15px;">
+
+				<!-- 资讯流 -->
+
+				<div id="edu-news">
+
+					<ul class="news-nav" data-boss="edu_news">
+
+						<li class="item" data-name="article">要闻</li>
+
+						<li class="item" data-name="cee">高考</li>
+
+						<li class="item" data-name="abroad">出国</li>
+
+						<li class="item" data-name="family">中小学</li>
+
+						<li class="item" data-name="gsee">考研</li>
+
+						<li class="item" data-name="bussiness">商学</li>
+
+						<li class="item" data-name="officer">公考</li>
+
+						<li class="item item-last" data-name="foreign">外语</li>
+
+					</ul>
+
+					<script>
+						$(function() {
+
+							var nav = $(".news-nav"); //得到导航对象  
+
+							var win = $(window); //得到窗口对象  
+
+							var sc = $(document); //得到document文档对象。  
+
+							win.scroll(function() {
+
+								if(sc.scrollTop() >= 605 && sc.scrollTop() <= 2405) {
+
+									nav.addClass("fixednav");
+
+								} else {
+
+									nav.removeClass("fixednav");
+
+								}
+
+							})
+
+						})
+
+						$(".news-nav .item").bind("mouseover", function() {
+
+							var x = $(this).index();
+
+							$(".news-nav .item").removeClass("on")
+
+							$(this).addClass("on")
+
+							var lis = document.querySelectorAll(".news-body .Q")
+
+							$(".news-body .Q").css("display", "none")
+
+							lis[x].style.display = "block"
+
+						})
+					</script>
+
+					<ul class="news-body" data-boss="edu_news">
+
+						<li class="item on Q" data-name="article">
+
+							<div class="section1">
+
+								<!--{php $tags=tag("moduleid=21&condition=status=3 and level=5&pagesize=10&datetype=2&order=addtime desc&template=null");}-->
+
+								{loop $tags $i $t}
+
+								<div class="article single">
+
+									<div class="title">
+
+										<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+									</div>
+
+									<ul class="pics">
+
+										<li class="pic">
+
+											<a href="{$t[linkurl]}" target="_blank"> <img src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}"> </a>
+
+										</li>
+
+									</ul>
+
+									<div class="info">
+
+										{if $t[copyfrom]}
+
+										<div class="source">来源：{$t[copyfrom]}</div>{/if} {if $t[author]}
+
+										<div class="tags">&nbsp;&nbsp;作者：{$t[author]}</div>{/if}
+
+										<div class="tool">
+
+											<div class="share item bdsharebuttonbox">
+
+												<a href="#" class="bds_more" data-cmd="more"></a>
+
+											</div>
+
+											<script>
+												window._bd_share_config = {
+
+													"common": {
+
+														"bdSnsKey": {},
+
+														"bdText": "",
+
+														"bdMini": "2",
+
+														"bdMiniList": false,
+
+														"bdPic": "",
+
+														"bdStyle": "1",
+
+														"bdSize": "16"
+
+													},
+
+													"share": {}
+
+												};
+
+												with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+											</script>
+
+										</div>
+
+									</div>
+
+								</div> {/loop} </div>
+
+						</li>
+
+						<li class="item Q" data-name="cee">
+
+							<div class="section1 on">
+
+								<!--{php $tags=tag("moduleid=21&catid=473&condition=status=3 and level=0&pagesize=10&datetype=2&order=addtime desc&template=null");}-->
+
+								{loop $tags $i $t}
+
+								<div class="article single">
+
+									<div class="title">
+
+										<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+									</div>
+
+									<ul class="pics">
+
+										<li class="pic">
+
+											<a href="{$t[linkurl]}" target="_blank"> <img src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}"> </a>
+
+										</li>
+
+									</ul>
+
+									<div class="info">
+
+										{if $t[copyfrom]}
+
+										<div class="source">来源：{$t[copyfrom]}</div>{/if} {if $t[author]}
+
+										<div class="tags">&nbsp;&nbsp;作者：{$t[author]}</div>{/if}
+
+										<div class="tool">
+
+											<div class="share item bdsharebuttonbox">
+
+												<a href="#" class="bds_more" data-cmd="more"></a>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div> {/loop} </div>
+
+							<a href="/news/473/" target="_blank" class="load-more" data-type="section1"> <span class="text">点击查看更多</span> <span class="icon"></span> </a>
+
+						</li>
+
+						<li class="item Q" data-name="abroad">
+
+							<div class="section1 on">
+
+								<!--{php $tags=tag("moduleid=21&catid=466&condition=status=3 and level=0&pagesize=10&datetype=2&order=addtime desc&template=null");}-->
+
+								{loop $tags $i $t}
+
+								<div class="article single">
+
+									<div class="title">
+
+										<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+									</div>
+
+									<ul class="pics">
+
+										<li class="pic">
+
+											<a href="{$t[linkurl]}" target="_blank"> <img src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}"> </a>
+
+										</li>
+
+									</ul>
+
+									<div class="info">
+
+										{if $t[copyfrom]}
+
+										<div class="source">来源：{$t[copyfrom]}</div>{/if} {if $t[author]}
+
+										<div class="tags">&nbsp;&nbsp;作者：{$t[author]}</div>{/if}
+
+										<div class="tool">
+
+											<div class="share item bdsharebuttonbox">
+
+												<a href="#" class="bds_more" data-cmd="more"></a>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div> {/loop} </div>
+
+							<a href="/news/466/" target="_blank" class="load-more" data-type="section1"> <span class="text">点击查看更多</span> <span class="icon"></span> </a>
+
+						</li>
+
+						<li class="item Q" data-name="foreign">
+
+							<div class="section1 on">
+
+								<!--{php $tags=tag("moduleid=21&catid=471&condition=status=3 and level=0&pagesize=10&datetype=2&order=addtime desc&template=null");}-->
+
+								{loop $tags $i $t}
+
+								<div class="article single">
+
+									<div class="title">
+
+										<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+									</div>
+
+									<ul class="pics">
+
+										<li class="pic">
+
+											<a href="{$t[linkurl]}" target="_blank"> <img src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}"> </a>
+
+										</li>
+
+									</ul>
+
+									<div class="info">
+
+										{if $t[copyfrom]}
+
+										<div class="source">来源：{$t[copyfrom]}</div>{/if} {if $t[author]}
+
+										<div class="tags">&nbsp;&nbsp;作者：{$t[author]}</div>{/if}
+
+										<div class="tool">
+
+											<div class="share item bdsharebuttonbox">
+
+												<a href="#" class="bds_more" data-cmd="more"></a>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div> {/loop} </div>
+
+							<a href="/news/471/" target="_blank" class="load-more" data-type="section1"> <span class="text">点击查看更多</span> <span class="icon"></span> </a>
+
+						</li>
+
+						<li class="item Q" data-name="family">
+
+							<div class="section1 on">
+
+								<!--{php $tags=tag("moduleid=21&catid=467&condition=status=3 and level=0&pagesize=10&datetype=2&order=addtime desc&template=null");}-->
+
+								{loop $tags $i $t}
+
+								<div class="article single">
+
+									<div class="title">
+
+										<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+									</div>
+
+									<ul class="pics">
+
+										<li class="pic">
+
+											<a href="{$t[linkurl]}" target="_blank"> <img src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}"> </a>
+
+										</li>
+
+									</ul>
+
+									<div class="info">
+
+										{if $t[copyfrom]}
+
+										<div class="source">来源：{$t[copyfrom]}</div>{/if} {if $t[author]}
+
+										<div class="tags">&nbsp;&nbsp;作者：{$t[author]}</div>{/if}
+
+										<div class="tool">
+
+											<div class="share item bdsharebuttonbox">
+
+												<a href="#" class="bds_more" data-cmd="more"></a>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div> {/loop} </div>
+
+							<a href="/news/467/" target="_blank" class="load-more" data-type="section1"> <span class="text">点击查看更多</span> <span class="icon"></span> </a>
+
+						</li>
+
+						<li class="item Q" data-name="gsee">
+
+							<div class="section1 on">
+
+								<!--{php $tags=tag("moduleid=21&catid=469&condition=status=3 and level=0&pagesize=10&datetype=2&order=addtime desc&template=null");}-->
+
+								{loop $tags $i $t}
+
+								<div class="article single">
+
+									<div class="title">
+
+										<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+									</div>
+
+									<ul class="pics">
+
+										<li class="pic">
+
+											<a href="{$t[linkurl]}" target="_blank"> <img src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}"> </a>
+
+										</li>
+
+									</ul>
+
+									<div class="info">
+
+										{if $t[copyfrom]}
+
+										<div class="source">来源：{$t[copyfrom]}</div>{/if} {if $t[author]}
+
+										<div class="tags">&nbsp;&nbsp;作者：{$t[author]}</div>{/if}
+
+										<div class="tool">
+
+											<div class="share item bdsharebuttonbox">
+
+												<a href="#" class="bds_more" data-cmd="more"></a>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div> {/loop} </div>
+
+							<a href="/news/469/" target="_blank" class="load-more" data-type="section1"> <span class="text">点击查看更多</span> <span class="icon"></span> </a>
+
+						</li>
+
+						<li class="item Q" data-name="bussiness">
+
+							<div class="section1 on">
+
+								<!--{php $tags=tag("moduleid=21&catid=470&condition=status=3 and level=0&pagesize=10&datetype=2&order=addtime desc&template=null");}-->
+
+								{loop $tags $i $t}
+
+								<div class="article single">
+
+									<div class="title">
+
+										<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+									</div>
+
+									<ul class="pics">
+
+										<li class="pic">
+
+											<a href="{$t[linkurl]}" target="_blank"> <img src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}"> </a>
+
+										</li>
+
+									</ul>
+
+									<div class="info">
+
+										{if $t[copyfrom]}
+
+										<div class="source">来源：{$t[copyfrom]}</div>{/if} {if $t[author]}
+
+										<div class="tags">&nbsp;&nbsp;作者：{$t[author]}</div>{/if}
+
+										<div class="tool">
+
+											<div class="share item bdsharebuttonbox">
+
+												<a href="#" class="bds_more" data-cmd="more"></a>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div> {/loop} </div>
+
+							<a href="/news/470/" target="_blank" class="load-more" data-type="section1"> <span class="text">点击查看更多</span> <span class="icon"></span> </a>
+
+						</li>
+
+						<li class="item Q last" data-name="officer">
+
+							<div class="section1 on">
+
+								<!--{php $tags=tag("moduleid=21&catid=468&condition=status=3 and level=0&pagesize=10&datetype=2&order=addtime desc&template=null");}-->
+
+								{loop $tags $i $t}
+
+								<div class="article single">
+
+									<div class="title">
+
+										<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+									</div>
+
+									<ul class="pics">
+
+										<li class="pic">
+
+											<a href="{$t[linkurl]}" target="_blank"> <img src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}"> </a>
+
+										</li>
+
+									</ul>
+
+									<div class="info">
+
+										{if $t[copyfrom]}
+
+										<div class="source">来源：{$t[copyfrom]}</div>{/if} {if $t[author]}
+
+										<div class="tags">&nbsp;&nbsp;作者：{$t[author]}</div>{/if}
+
+										<div class="tool">
+
+											<div class="share item bdsharebuttonbox">
+
+												<a href="#" class="bds_more" data-cmd="more"></a>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div> {/loop} </div>
+
+							<a href="/news/468/" target="_blank" class="load-more" data-type="section1"> <span class="text">点击查看更多</span> <span class="icon"></span> </a>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- 右栏 -->
+
+		<div class="edu-col-right">
+
+			<!-- 视频 -->
+
+			<!-- 视频 -->
+
+			<div id="edu-video" data-boss="edu_video" style="color: #666;border:1px solid #ccc">
+
+				<div class="rightbar mt15">
+
+					<div class="user-header"> {if $_userid}
+
+						<a class="head-picnew" target="_blank" href="{$MODULE[2][linkurl]}">
+
+							<img src="{useravatar($_username, 'large')}&time={$DT_TIME}" width="50" height="50" />
+
+						</a> {else}
+
+						<a class="head-pic-no" target="_blank" href="{$MODULE[2][linkurl]}"></a> {/if}
+
+						<div class="head-text">
+
+							<span class="say-hello">Hi,
+
+							<script language="javaScript"> 
+
+								now = new Date(),hour = now.getHours() 
+
+								if(hour < 6){document.write("凌晨好！")} 
+
+								else if (hour < 9){document.write("早上好！")} 
+
+								else if (hour < 12){document.write("上午好！")} 
+
+								else if (hour < 14){document.write("中午好！")} 
+
+								else if (hour < 17){document.write("下午好！")} 
+
+								else if (hour < 19){document.write("傍晚好！")} 
+
+								else if (hour < 23){document.write("晚上好！")} 
+
+								else  {document.write("夜里好！")} 
+
+							</script>
+
+							</span>
+
+							<span class="last-login">欢迎来到 教育之家</span>
+
+						</div>
+
+					</div>
+
+					<div class="operation">
+
+						<div {if $_userid}{else}style="display:none;" {/if}>
+
+							<ul class="register_after">
+
+								<li style="padding-bottom: 0;">
+
+									<a href="{$MODULE[2][linkurl]}" target="_blank" title="进入会员中心" rel="nofollow">进入会员中心</a>
+
+								</li>
+
+								<li>
+
+									<a href="{$MODULE[2][linkurl]}{$DT[file_my]}?mid=5&action=add" target="_blank" title="发布信息" rel="nofollow">发布信息</a>
+
+								</li>
+
+								<li>
+
+									<a href="{$MODULE[2][linkurl]}home.php" target="_blank" title="管理商铺" rel="nofollow">管理商铺</a>
+
+								</li>
+
+								<li>
+
+									<a href="{$MODULE[2][linkurl]}logout.php" title="注销登陆" rel="nofollow">注销登陆</a>
+
+								</li>
+
+							</ul>
+
+						</div>
+
+						<div {if $_userid}style="display:none;" {else}{/if}>
+
+							<a href="{$MODULE[2][linkurl]}{$DT[file_login]}" target="_blank" class="login-btn fl" rel="nofollow">登录</a>
+
+							<a href="{$MODULE[2][linkurl]}{$DT[file_register]}" target="_blank" class="regist-btn fl" rel="nofollow">免费注册</a>
+
+						</div>
+
+					</div>
+
+					<div class="help-tab">
+
+						<div class="hd">
+
+							<ul id="tab">
+
+								<li class="on" style="width: 24px;">
+
+									<a href="{DT_PATH}announce/" target="_blank">公告</a>
+
+								</li>
+
+								<li style="width: 24px;">规则</li>
+
+								<li>我是卖家</li>
+
+								<li style="margin: 0;">我是买家</li>
+
+							</ul>
+
+						</div>
+
+						<div class="bd" id="tab-sub">
+
+							<!--{tag("table=announce&condition=totime=0 or totime>$today_endtime-86400&areaid=$cityid&pagesize=2&class=dot&order=listorder desc,addtime desc&class=dot02&target=_blank&length=20&cname=公告&template=xiaohei-index02")}-->
+
+							<!--{tag("moduleid=27&catid=36738&length=20&cname=规则&condition=status=3&areaid=$cityid&pagesize=2&order=addtime desc&target=_blank&class=dot02&template=xiaohei-index02")}-->
+
+							<!--{tag("moduleid=27&catid=36703&length=20&cname=我是卖家&condition=status=3&areaid=$cityid&pagesize=2&order=addtime desc&target=_blank&class=dot02&template=xiaohei-index02")}-->
+
+							<!--{tag("moduleid=27&catid=36704&length=20&cname=我是买家&condition=status=3&areaid=$cityid&pagesize=2&order=addtime desc&target=_blank&class=dot02&template=xiaohei-index02")}-->
+
+						</div>
+
+					</div>
+
+					<div class="clear"> </div>
+
+					<!--工具推广-->
+
+					<div class="user-svr mt15">
+
+						<a target="_blank" rel="nofollow" href="{$MODULE[2][linkurl]}{$DT[file_register]}" class="user-svr-basic" style="position: relative;">
+
+							<span class="free-tags">免费加入<b></b></span>
+
+							<i class="icon-home icon-basic"></i>
+
+							<em>会员服务</em>
+
+						</a>
+
+						<a target="_blank" href="{$MODULE[2][linkurl]}validate.php" rel="nofollow" class="user-svr-basic"> <i class="icon-home icon-cer"></i> <em>会员认证</em> </a>
+
+						<a target="_blank" href="{$MODULE[1][linkurl]}spread/" rel="nofollow"> <i class="icon-home icon-rank"></i> <em>排名推广</em> </a>
+
+						<a target="_blank" href="{$MODULE[1][linkurl]}ad/" rel="nofollow"> <i class="icon-home icon-advert"></i> <em>广告服务</em> </a>
+
+					</div>
+
+					<!-- 价格行情 -->
+
+					<div class="price mt10">
+
+						<div class="ptit f12 fb">新入供应商
+
+							<div class="fr" id="site_stats">
+
+								<div class="swiper-container swiper-container2">
+
+									<div class="swiper-wrapper">
+
+										<div class="swiper-slide swiper-slide2">产品数：<span class="tongji">{php echo number_format(242332333+($db->count($DT_PRE.'sell_5', 'status=3', 1800)));} </span></div>
+
+										<div class="swiper-slide swiper-slide2">采购数：<span class="tongji">{php echo number_format(32333+($db->count($DT_PRE.'buy_6', 'status=3', 1800)));} </span></div>
+
+										<div class="swiper-slide swiper-slide2">企业数：<span class="tongji">{php echo number_format(24332333+($db->count($DT_PRE.'company', '1', 1800)));} </span></div>
+
+										<div class="swiper-slide swiper-slide2">在线会员：<span class="tongji">{php echo number_format(240+($db->count($DT_PRE.'online', '1', 1800)));} </span></div>
+
+									</div>
+
+								</div>
+
+								<script>
+									var mySwiper = new Swiper('.swiper-container2', {
+
+										pagination: '.pagination',
+
+										direction: 'vertical',
+
+										loop: false,
+
+										grabCursor: true,
+
+										paginationClickable: true,
+
+										autoplay: 3000
+
+									})
+								</script>
+
+							</div>
+
+						</div>
+
+						<div class="trade">
+
+							<div class="bd">
+
+								<div class="swiper-container swiper-container3">
+
+									<!--{php $tags=tag("moduleid=12&condition=level>0 and status=3&areaid=$cityid&pagesize=6&order=addtime desc&template=null");}-->
+
+									<div class="swiper-wrapper">
+
+										{loop $tags $i $t}
+
+										<div class="swiper-slide swiper-slide3">
+
+											<span class="fr gray">{$t[date]}</span>
+
+											<a href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+										</div>
+
+										{/loop}
+
+									</div>
+
+								</div>
+
+							</div>
+							<style>
+								.swiper-container3 {
+									margin-left: 20px;
+								}
+								
+								.swiper-slide3 {
+									height: 30px !important;
+								}
+							</style>
+							<script>
+								var mySwiper = new Swiper('.swiper-container3', {
+
+									pagination: '.pagination',
+									slidesPerView: 3,
+
+									direction: 'vertical',
+
+									loop: false,
+
+									grabCursor: true,
+
+									paginationClickable: true,
+
+									autoplay: 3000
+
+								})
+							</script>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<!--采购信息-->
+
+			</div>
+
+			<div id="scroll-part-right">
+
+				<!-- 大学排名 -->
+
+				<div id="edu-rank" class="col-right-feature" data-boss="edu_dxpm">
+
+					<div class="header">
+
+						<div class="title">大学排名</div>
+
+					</div>
+
+					<div class="body">
+
+						<ul class="rank-list">
+
+							<li class="item">
+
+								<a href="http://edu.qq.com/rankings/index.htm#arwu" target="_blank">ARWU<br/>世界大学排名<span class="icon icon-arrow-right"></span></a>
+
+							</li>
+
+							<li class="item">
+
+								<a href="http://edu.qq.com/rankings/index.htm#qs" target="_blank">QS<br/>世界大学排名<span class="icon icon-arrow-right"></span></a>
+
+							</li>
+
+							<li class="item">
+
+								<a href="http://edu.qq.com/rankings/index.htm#the" target="_blank">THE<br/>世界大学排名<span class="icon icon-arrow-right"></span></a>
+
+							</li>
+
+							<li class="item">
+
+								<a href="http://edu.qq.com/rankings/index.htm#usnews" target="_blank">U.S.News<br/>世界大学排名<span class="icon icon-arrow-right"></span></a>
+
+							</li>
+
+							<li class="item">
+
+								<a href="http://edu.qq.com/rankings/index.htm#zh" target="_blank">软科版<br/>中国大学排名<span class="icon icon-arrow-right"></span></a>
+
+							</li>
+
+							<li class="item">
+
+								<a href="http://edu.qq.com/rankings/index.htm#wsl" target="_blank">武书连<br/>中国大学排名<span class="icon icon-arrow-right"></span></a>
+
+							</li>
+
+							<!--22065ee3b59cf8a7939ee9e21bad5856-->
+
+							<!--[if !IE]>|xGv00|dc4f7e52bf09e66925e1802c4baf3d84<![endif]-->
+
+						</ul>
+
+					</div>
+
+				</div>
+
+				<!-- 右栏广告 -->
+
+				<div id="ad-3" class="ad" data-boss="edu_bz_ad"> <img src="/skin/jiaoyuz/image/index/3068334.gif" width="300" height="250" /> </div>
+
+				<!-- 院校信息库 -->
+
+				<div class="right1">
+
+					<div class="right1head">
+
+						<div></div>
+
+						<h2>跟贴排行</h2> </div>
+
+					<ul class="rihgtul">
+
+						<li>
+
+							<a>
+
+								<h3 style="color: #3094ed;">1</h3>
+
+								<p>高校获赠一万斤花菜 于是午餐变成了这样</p>
+
+							</a>
+
+						</li>
+
+						<li>
+
+							<a>
+
+								<h3 style="color: #3094ed;">2</h3>
+
+								<p>深圳最贵幼儿园举行豪华毕业礼 群星闪耀</p>
+
+							</a>
+
+						</li>
+
+						<li>
+
+							<a>
+
+								<h3 style="color: #3094ed;">3</h3>
+
+								<p>10岁女孩书店遭7旬老汉猥亵猥亵3词竟毫无反应</p>
+
+							</a>
+
+						</li>
+
+						<li>
+
+							<a>
+
+								<h3 style="color: #3094ed;">3</h3>
+
+								<p>10岁女孩书店遭7旬老汉猥亵猥亵3词竟毫无反应</p>
+
+							</a>
+
+						</li>
+						<li>
+
+							<a>
+
+								<h3 style="color: #3094ed;">3</h3>
+
+								<p>10岁女孩书店遭7旬老汉猥亵猥亵3词竟毫无反应</p>
+
+							</a>
+
+						</li>
+						<li>
+
+							<a>
+
+								<h3 style="color: #3094ed;">3</h3>
+
+								<p>10岁女孩书店遭7旬老汉猥亵猥亵3词竟毫无反应</p>
+
+							</a>
+
+						</li>
+						<li>
+
+							<a>
+
+								<h3 style="color: #3094ed;">3</h3>
+
+								<p>10岁女孩书店遭7旬老汉猥亵猥亵3词竟毫无反应</p>
+
+							</a>
+
+						</li>
+						<li>
+
+							<a>
+
+								<h3 style="color: #3094ed;">3</h3>
+
+								<p>10岁女孩书店遭7旬老汉猥亵猥亵3词竟毫无反应</p>
+
+							</a>
+
+						</li>
+						<li>
+
+							<a>
+
+								<h3 style="color: #3094ed;">3</h3>
+
+								<p>10岁女孩书店遭7旬老汉猥亵猥亵3词竟毫无反应</p>
+
+							</a>
+
+						</li>
+
+						<!--{php $tags=tag("moduleid=18&table=club_group&condition=status=3 AND level>0&areaid=$cityid&order=addtime desc&pagesize=".$DT[page_club]."&template=null");}-->
+
+						{loop $tags $i $t}
+
+						<li>
+
+							<a>
+
+								<h3>4</h3>
+
+								<p>{$t[title]}</p>
+
+							</a>
+
+						</li> {/loop} </ul>
+
+				</div>
+
+				<style>
+
+				</style>
+
+				<!-- 右栏广告 -->
+
+				<div id="ad-4" class="ad" data-boss="edu_ad"> <img src="/skin/jiaoyuz/image/index/144047834.jpg" alt="广告" width="300" height="314" /> </div>
+
+			</div>
+		</div>
+	</div>
+	<!-- 中部广告1 -->
+	<div class="edu-bd edu-ad">
+		<div id="ad-5" class="ad" data-boss="edu_gp_banner2">
+
+			<img src="/skin/jiaoyuz/image/index/2983001.jpg" /> </div>
+		<div id="ad-6" class="ad" data-boss="edu_banner2">
+
+			<img src="/skin/jiaoyuz/image/index/ninja148480997229281.jpg" alt="图解教育" /> </div>
+	</div>
+	<!-- 机构  -->
+	<div class="edu-bd edu-bd-feature" id="edu-penguin">
+		<div class="header" data-boss="edu_qehbt">
+
+			<div class="repeat-header repeat-header-left">
+
+				<div class="repeat"></div>
+
+				<div class="repeat-left"></div>
+
+			</div>
+
+			<div class="repeat-header repeat-header-right">
+
+				<div class="repeat-right"></div>
+
+				<div class="repeat"></div>
+
+			</div>
+
+			<a class="title" href="/jigou/" target="_blank"></a>
+		</div>
+		<div class="body">
+
+			<div class="edu-col-left" data-boss="edu_qeh" style="width:100%">
+
+				<ul class="account-list">
+
+					<li class="account">
+
+						<div class="header">
+
+							<a class="avartar" style="background-image:url('/skin/jiaoyuz/image/index/144126460.jpg');">
+
+								<!--[if lte IE 8]>            
+
+
+
+<div class="mask"></div>          
+
+
+
+<![endif]-->
+
+							</a>
+
+							<div class="text">
+
+								<div class="title">
+
+									<a target="_blank">外滩教育</a>
+
+								</div>
+
+								<div class="abstract">
+
+									<a target="_blank">K12国际教育领先媒体</a>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<ul class="articles">
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">从全美热议的纪录片，看中国离成功教改还有多远？</a>
+
+							</li>
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">名校看重的辩论能力，如何让中国学生不再沉默？</a>
+
+							</li>
+
+						</ul>
+
+					</li>
+
+					<li class="account">
+
+						<div class="header">
+
+							<a target="_blank" class="avartar" style="background-image:url('/skin/jiaoyuz/image/index/144126461.jpg');">
+
+								<!--[if lte IE 8]>            <div class="mask"></div>          <![endif]-->
+
+							</a>
+
+							<div class="text">
+
+								<div class="title">
+
+									<a target="_blank">少年商学院</a>
+
+								</div>
+
+								<div class="abstract">
+
+									<a target="_blank">移动版的国际学校</a>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<ul class="articles">
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">对孩子狠一点！送两个女儿进哈佛后我的3点感悟</a>
+
+							</li>
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">“积分奖励表”的危害，等孩子8岁后才真正爆发</a>
+
+							</li>
+
+						</ul>
+
+					</li>
+
+					<li class="account">
+
+						<div class="header">
+
+							<a target="_blank" class="avartar" style="background-image:url('/skin/jiaoyuz/image/index/144126462.jpg');">
+
+								<!--[if lte IE 8]>            <div class="mask"></div>          <![endif]-->
+
+							</a>
+
+							<div class="text">
+
+								<div class="title">
+
+									<a target="_blank">北美留学生日报</a>
+
+								</div>
+
+								<div class="abstract">
+
+									<a target="_blank">中国最大的独立留学新媒体</a>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<ul class="articles">
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">“他还是个孩子啊” 这句话毁了多少孩子和家庭</a>
+
+							</li>
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">美国人民居然连这些单词都会拼错？来看看你会不会</a>
+
+							</li>
+
+						</ul>
+
+					</li>
+
+					<li class="account">
+
+						<div class="header">
+
+							<a target="_blank" class="avartar" style="background-image:url('/skin/jiaoyuz/image/index/144126463.jpg');">
+
+								<!--[if lte IE 8]>            <div class="mask"></div>          <![endif]-->
+
+							</a>
+
+							<div class="text">
+
+								<div class="title">
+
+									<a target="_blank">远方老师在美国</a>
+
+								</div>
+
+								<div class="abstract">
+
+									<a target="_blank">探讨中美教育话题，分享孩子成长经历</a>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<ul class="articles">
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">揭秘！考试前，美国中小学老师会怎样鼓励学生呢？</a>
+
+							</li>
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">“功课容易作业少，推崇体育运动”，外国学生如此评价美国高中</a>
+
+							</li>
+
+						</ul>
+
+					</li>
+
+					<li class="account">
+
+						<div class="header">
+
+							<a target="_blank" class="avartar" style="background-image:url('/skin/jiaoyuz/image/index/144126464.jpg');">
+
+								<!--[if lte IE 8]>            <div class="mask"></div>          <![endif]-->
+
+							</a>
+
+							<div class="text">
+
+								<div class="title">
+
+									<a target="_blank">美国教育漫谈</a>
+
+								</div>
+
+								<div class="abstract">
+
+									<a target="_blank">分享美国教育理念、学习方法等</a>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<ul class="articles">
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">生孩子之前，夫妻究竟需要不需要考家长执照？</a>
+
+							</li>
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">美国孩子暑假玩什么？在桌游中锻炼智商和情商</a>
+
+							</li>
+
+						</ul>
+
+					</li>
+
+					<li class="account">
+
+						<div class="header">
+
+							<a target="_blank" class="avartar" style="background-image:url('/skin/jiaoyuz/image/index/144126466.jpg');">
+
+								<!--[if lte IE 8]>            <div class="mask"></div>          <![endif]-->
+
+							</a>
+
+							<div class="text">
+
+								<div class="title">
+
+									<a target="_blank">赵刚Andrew</a>
+
+								</div>
+
+								<div class="abstract">
+
+									<a target="_blank">探讨中英教育</a>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<ul class="articles">
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">留学的价值：只能保证我们增加阅历，不能保证成功</a>
+
+							</li>
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">高考状元又怎么样：你的高考分数有多少含金量？</a>
+
+							</li>
+
+						</ul>
+
+					</li>
+
+					<li class="account">
+
+						<div class="header">
+
+							<a target="_blank" class="avartar" style="background-image:url('/skin/jiaoyuz/image/index/144126464.jpg');">
+
+								<!--[if lte IE 8]>            <div class="mask"></div>          <![endif]-->
+
+							</a>
+
+							<div class="text">
+
+								<div class="title">
+
+									<a target="_blank">美国教育漫谈</a>
+
+								</div>
+
+								<div class="abstract">
+
+									<a target="_blank">分享美国教育理念、学习方法等</a>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<ul class="articles">
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">生孩子之前，夫妻究竟需要不需要考家长执照？</a>
+
+							</li>
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">美国孩子暑假玩什么？在桌游中锻炼智商和情商</a>
+
+							</li>
+
+						</ul>
+
+					</li>
+
+					<li class="account">
+
+						<div class="header">
+
+							<a target="_blank" class="avartar" style="background-image:url('/skin/jiaoyuz/image/index/144126464.jpg');">
+
+								<!--[if lte IE 8]>            <div class="mask"></div>          <![endif]-->
+
+							</a>
+
+							<div class="text">
+
+								<div class="title">
+
+									<a target="_blank">美国教育漫谈</a>
+
+								</div>
+
+								<div class="abstract">
+
+									<a target="_blank">分享美国教育理念、学习方法等</a>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<ul class="articles">
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">生孩子之前，夫妻究竟需要不需要考家长执照？</a>
+
+							</li>
+
+							<li class="article">
+
+								<div class="icon-circle"></div>
+
+								<a target="_blank">美国孩子暑假玩什么？在桌游中锻炼智商和情商</a>
+
+							</li>
+
+						</ul>
+
+					</li>
+
+				</ul>
+
+				<!--117e598d6c24657721b450069b6c50b6-->
+
+				<!--[if !IE]>|xGv00|9b1ba4683564192e0f8d83fbae89f2cb<![endif]-->
+
+			</div>
+		</div>
+	</div>
+	<!-- 精品课  -->
+	<div class="edu-bd edu-bd-feature" id="edu-class">
+		<div class="header" data-boss="edu_jpkbt">
+
+			<div class="repeat-header repeat-header-left">
+
+				<div class="repeat"></div>
+
+				<div class="repeat-left"></div>
+
+			</div>
+
+			<div class="repeat-header repeat-header-right">
+
+				<div class="repeat-right"></div>
+
+				<div class="repeat"></div>
+
+			</div>
+
+			<a class="title" href="/kecheng/" target="_blank"></a>
+		</div>
+		<div class="body">
+
+			<div class="edu-col-left" data-boss="edu_jpk">
+
+				<ul class="classes">
+
+					<li class="class main">
+
+						<a class="img" target="_blank">
+
+							<img src="/skin/jiaoyuz/image/index/144652531.jpg" alt="陕西科技大学材料类专业">
+
+						</a>
+
+						<div class="title">
+
+							<span class="icon-play"></span>
+
+							<a class="text" target="_blank">陕西科技大学材料类专业</a>
+
+						</div>
+
+						<div class="info">
+
+							<span class="learn">9人学习</span>
+
+							<span class="score">8分</span>
+
+						</div>
+
+					</li>
+
+					<li class="class sm">
+
+						<a class="img" target="_blank">
+
+							<img src="/skin/jiaoyuz/image/index/144652532.jpg" alt="陕西科技大学轻化工程专业">
+
+						</a>
+
+						<div class="title">
+
+							<span class="icon-play"></span>
+
+							<a class="text" target="_blank">陕西科技大学轻化工程专业</a>
+
+						</div>
+
+						<div class="info">
+
+							<span class="learn">人学习</span>
+
+							<span class="score">分</span>
+
+						</div>
+
+					</li>
+
+					<li class="class sm">
+
+						<a class="img" target="_blank">
+
+							<img src="/skin/jiaoyuz/image/index/kaoyanzhengzhi.jpg" alt="2018考研政治暑期复习指导">
+
+						</a>
+
+						<div class="title">
+
+							<span class="icon-play"></span>
+
+							<a class="text" target="_blank">2018考研政治暑期复习指导</a>
+
+						</div>
+
+						<div class="info">
+
+							<span class="learn">人学习</span>
+
+							<span class="score">分</span>
+
+						</div>
+
+					</li>
+
+					<li class="class sm">
+
+						<a class="img" target="_blank">
+
+							<img src="/skin/jiaoyuz/image/index/airumen.jpg" alt="AI基础入门系统班">
+
+						</a>
+
+						<div class="title">
+
+							<span class="icon-play"></span>
+
+							<a class="text" target="_blank">AI基础入门系统班</a>
+
+						</div>
+
+						<div class="info">
+
+							<span class="learn">人学习</span>
+
+							<span class="score">分</span>
+
+						</div>
+
+					</li>
+
+					<li class="class sm">
+
+						<a class="img" target="_blank">
+
+							<img src="/skin/jiaoyuz/image/index/zhongyaojian.jpg" alt="中药的煎煮与服用">
+
+						</a>
+
+						<div class="title">
+
+							<span class="icon-play"></span>
+
+							<a class="text" target="_blank">中药的煎煮与服用</a>
+
+						</div>
+
+						<div class="info">
+
+							<span class="learn">人学习</span>
+
+							<span class="score">分</span>
+
+						</div>
+
+					</li>
+
+				</ul>
+
+				<!--ee7885b55ad394de89e970bcd4bd6eea-->
+
+				<!--[if !IE]>|xGv00|750d82989498858184aaecb6145280f9<![endif]-->
+
+			</div>
+
+			<div class="edu-col-right" data-boss="edu_jpkdh">
+
+				<div class="box">
+
+					<h3><span>英语培训</span></h3>
+
+					<ul>
+
+						<li>
+
+							<a href="/kecheng/1/" target="_blank">英语培训</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/5/" target="_blank">雅思培训</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/8/" target="_blank">托福培训</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/10/" target="_blank">少儿英语</a>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class="box">
+
+					<h3><span>课外辅导</span></h3>
+
+					<ul>
+
+						<li>
+
+							<a href="/kecheng/4/" target="_blank">课外辅导</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/33/" target="_blank">一对一</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/34/" target="_blank">高考辅导</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/37/" target="_blank">中考辅导</a>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class="box">
+
+					<h3><span>就业技能</span></h3>
+
+					<ul>
+
+						<li>
+
+							<a href="/kecheng/88/" target="_blank">就业技能</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/165/" target="_blank">美容</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/166/" target="_blank">美发</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/190/" target="_blank">数控机床</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/180/" target="_blank">家电维修</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/373/" target="_blank">室内设计</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/178/" target="_blank">主持策划</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/365/" target="_blank">挖掘机</a>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class="box">
+
+					<h3><span>电脑培训</span></h3>
+
+					<ul>
+
+						<li>
+
+							<a href="/kecheng/86/" target="_blank">电脑培训</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/118/" target="_blank">平面设计</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/127/" target="_blank">网络营销</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/122/" target="_blank">软件开发</a>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class="box">
+
+					<h3><span>学历教育</span></h3>
+
+					<ul>
+
+						<li>
+
+							<a href="/kecheng/89/" title="" target="_blank">学历教育</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/200/" title="" target="_blank">远程教育</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/207/" title="" target="_blank">成人高考</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/196/" title="" target="_blank">MBA辅导</a>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class="box">
+
+					<h3><span>资格认证</span></h3>
+
+					<ul>
+
+						<li>
+
+							<a href="/kecheng/90/" title="" target="_blank">资格认证</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/209/" title="" target="_blank">公务员</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/210/" title="" target="_blank">司法考试</a>
+
+						</li>
+
+						<li>
+
+							<a href="/kecheng/231/" title="" target="_blank">心理咨询师</a>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- 中部广告2 -->
+	<div class="edu-bd edu-ad">
+		<div id="ad-7" class="ad" data-boss="edu_gp_banner3"> <img src="/skin/jiaoyuz/image/index/2318081.gif" /> </div>
+		<div id="ad-8" class="ad" data-boss="edu_banner3"> <img src="/skin/jiaoyuz/image/index/ninja148480997229281.jpg" alt="图解教育" /> </div>
+	</div>
+	<div class="edu-bd edu-bd-feature" id="edu-photo">
+		<div class="header" data-boss="edu_dtbt">
+
+			<div class="repeat-header repeat-header-left">
+
+				<div class="repeat"></div>
+
+				<div class="repeat-left"></div>
+
+			</div>
+
+			<div class="repeat-header repeat-header-right">
+
+				<div class="repeat-right"></div>
+
+				<div class="repeat"></div>
+
+			</div>
+
+			<a class="title" href="/photo/" target="_blank"></a>
+		</div>
+		<div class="body">
+
+			<div class="edu-col-left" data-boss="edu_dutu" style="width: 896px;">
+
+				<ul class="photos first-row">
+
+					<!--{php $tags=tag("moduleid=12&condition=level>0 and status=3&areaid=$cityid&pagesize=6&order=addtime desc&template=null");}-->
+
+					{loop $tags $t}
+
+					<li class="photo">
+
+						<a class="img" href="{$t[linkurl]}" target="_blank"> <img src="{if $t[thumb]}{str_replace('thumb', 'middle', $t[thumb])}{else}{DT_SKIN}image/nopic200.gif{/if}" alt="{$t[alt]}"> </a>
+
+						<div class="title">
+
+							<a class="text" href="{$t[linkurl]}" target="_blank">{$t[title]}</a>
+
+						</div>
+
+					</li> {/loop} </ul>
+
+				<div class="divider"></div>
+
+			</div>
+
+			<div class="edu-col-right col-right-feature" data-boss="edu_rtph">
+
+				<div class="header">
+
+					<div class="title">热图排行</div>
+
+				</div>
+
+				<div class="body">
+
+					<ul class="photo-rank">
+
+						<!--{php $tags=tag("moduleid=12&condition=level>0 and status=3&areaid=$cityid&pagesize=10&order=hits desc&template=null");}-->
+
+						{loop $tags $i $t} {php $kk=$i+1}
+
+						<li class="item{if $i<3} top-three{else}{/if}">
+
+							<div class="icon-num">{$kk}</div>
+
+							<div class="text">
+
+								<a target="_blank" href="{$t[linkurl]}">{$t[title]}</a>
+
+							</div>
+
+						</li>
+
+						{/loop}
+
+					</ul>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--友情链接-->
+	<div class="wrapper floors mark-lay mt20 clear ibox" id="12f">
+		<div class="wrap">
+
+			<div class="header">
+
+				<h3>友情链接</h3> <span class="yl gray fr"><a href="{DT_PATH}link/index.php?action=reg" target="_blank">在线申请链接</a>&#160;&#160;&#160;&#160;<a href="{DT_PATH}">请做好本站链接之后再申请 关键字"{$DT[sitename]}"，本站网址：{DT_PATH}</a></span> </div>
+
+			<div class="friendlink"> {if $DT[page_text]}
+
+				<!--{tag("table=link&condition=status=3 and level>0 and thumb='' and username=''&areaid=$cityid&pagesize=".$DT['page_text']."&order=listorder desc,itemid desc&template=list-link&cols=9")}-->
+
+				{/if} </div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var arrData = [];
+		var College = {};
+	</script>
+	<script src="{DT_SKIN}js/index/require.min.js"></script>
+	<script charset="gbk" src="{DT_SKIN}js/index/ping.js"></script>
+	<script>
+		! function(t, e) {
+
+			"use strict";
+
+			function a() {
+
+				var t, e, a = ("" + p.catalog_full).replace(/-/g, ".").replace(/_/g, "-");
+
+				p.topic && p.topic.name && p.topic.name.length > 0 ? (t = "L.", e = "Z." + a + "." + p.topic.name) : (t = "L." + a, e = "Z.");
+
+				var n = "W." + p.type,
+
+					o = "M." + p.tpl.type + p.tpl.stype,
+
+					i = "P." + ("" + p.site).replace(/_/g, "-"),
+
+					c = "F." + f,
+
+					l = t + "_" + e + "_" + n + "_" + o + "_" + i + "_" + c;
+
+				l && r({
+
+					pgUserType: l
+
+				})
+
+			}
+
+			function n(t) {
+
+				o(e, "click", function(e) {
+
+					var a = e.target;
+
+					"img" === a.tagName && (a = a.parentNode);
+
+					var n = a.tagName.toLowerCase(),
+
+						o = a.getAttribute("href");
+
+					if(!o || o.indexOf("qqcom_pgv_from=") > -1) return !1;
+
+					if("a" === n && a.hostname && a.hostname.indexOf("qq.com") > -1) {
+
+						var r = o + (a.search ? "&" : "?") + "qqcom_pgv_from=" + t;
+
+						a.setAttribute("href", r)
+
+					}
+
+				})
+
+			}
+
+			function o(a, n, o) {
+
+				var r = function(a) {
+
+					return a = a || t.event, a.target || (a.target = a.srcElement || e), 3 === a.target.nodeType && (a.target = a.target.parentNode), a
+
+				};
+
+				return a.addEventListener ? a.addEventListener(n, function(t) {
+
+					o.call(t.currentTarget, r(t))
+
+				}, !1) : a.attachEvent("on" + n, function(t) {
+
+					o.call(a, r(t))
+
+				}), !0
+
+			}
+
+			if(!t || !t.location || "function" != typeof t.pgvMain) return !1;
+
+			var r = function() {
+
+					var e = arguments;
+
+					setTimeout(function() {
+
+						t.pgvMain.apply(this, e)
+
+					}, 0)
+
+				},
+
+				i = location.search.replace(/adtag=client\.qq\.\d+_\.0/i, "from=tips"),
+
+				c = ["aio", "tips"],
+
+				f = "def";
+
+			location.search.indexOf("qqcom_pgv_from=") > -1 && (f = location.host + location.pathname + location.search);
+
+			var p = t.ARTICLE_INFO || null,
+
+				l = p && p.catalog_full;
+
+			if(l)
+
+				for(var g = 0; g < c.length; g += 1)
+
+					if(i.indexOf(c[g]) > -1) {
+
+						n(c[g]);
+
+						break
+
+					}
+
+			l && a(), l || ("undefined" != typeof whatCatalog && (t.pvCSTM = t.whatCatalog), r({
+
+				pgUserType: "F." + f
+
+			}))
+		}(window, document);
+	</script>
+
+	<script src="//mat1.gtimg.com/www/chrometips/notification2017_v0118.js"></script>
+
+	<script src="{DT_SKIN}js/index/ptag_1.2.js" async="true"></script>
+
+	<script>
+		$(".rweixin").mouseover(function() {
+
+			$(".weixinimg").css("right", "50px")
+		}).mouseout(function() {
+
+			$(".weixinimg").css("right", "140px")
+		})
+	</script>
+
+	<script src="{DT_SKIN}js/index/xinwendingwei.js"></script>
+
+	<script src="{DT_SKIN}js/index/qbs.js"></script>
+
+	<script type="text/javascript">
+		//
+
+		show_task('moduleid=1&html=index');
+		$(function() {
+
+			$("img").lazyload();
+
+		});
+	</script>
+
+	{template "footer"}

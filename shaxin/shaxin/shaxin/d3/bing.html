@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<body>
+	</body>
+	<script>
+		var pie = d3.layout.pie();
+		var piedata = pie(dataset);
+		var dataset = [39, 20, 48, 29, 30];
+		
+		var outerRadius = 150; //外半径
+		var innerRadius = 0; //内半径，为0则中间没有空白
+
+		var arc = d3.svg.arc() //弧生成器
+			.innerRadius(innerRadius) //设置内半径
+			.outerRadius(outerRadius); //设置外半径
+		var arcs = svg.selectAll("g")
+			.data(piedata)
+			.enter()
+			.append("g")
+			.attr("transform", "translate(" + (width / 2) + "," + (width / 2) + ")");
+		arcs.append("path")
+			.attr("fill", function(d, i) {
+				return color(i);
+			})
+			.attr("d", function(d) {
+				return arc(d); //调用弧生成器，得到路径值
+			});
+		var color = d3.scale.category10(); //有十种颜色的颜色比例尺
+		arcs.append("text")
+			.attr("transform", function(d) {
+				return "translate(" + arc.centroid(d) + ")";
+			})
+			.attr("text-anchor", "middle")
+			.text(function(d) {
+				return d.data;
+			});
+		var dataset = [39, 20, 48, 29, 30];
+		var pie = d3.layout.pie();
+		var piedata = pie(dataset);
+	</script>
+
+</html>

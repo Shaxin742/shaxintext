@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<a href="">ddd</a>
+		</div>
+	</body>
+	<script>
+		var div = document.querySelector("div")
+		var node = document.createElement("a")
+		var textnode = document.createTextNode("sd");
+		node.href="www.baidu.com"
+		node.appendChild(textnode);
+		div.appendChild(node)
+	</script>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+
+
+<script>
+function allSelect(check_v, checkname)
+{
+    var v_item = document.getElementsByName(check_v);
+    var items = document.getElementsByName(checkname);
+    for (var i = 0; i < items.length; ++i)
+    {
+        if (v_item[0].checked)
+        {
+            items[i].checked = true;
+        }
+        else
+        {
+            items[i].checked = false;
+        }
+    }
+}
+
+function singleSelect2parent(check_v, checkname)
+{
+    var v_item = document.getElementsByName(check_v);
+    var items = document.getElementsByName(checkname);
+    var childStatus = true;
+    for (var i = 0; i < items.length; ++i)
+    {
+        childStatus = (childStatus && items[i].checked);
+    }
+    if (childStatus)
+    {
+        v_item[0].checked = true;
+    }
+    else
+    {
+        v_item[0].checked = false;
+    }
+}
+
+</script>
+</head>
+<body>
+
+<p> <input type="checkbox" checked name="checkbox_v1" value="version1" onclick="allSelect('checkbox_v1', 'checkbox1')">版本一</p>
+<ul>
+    <p> <input type="checkbox" checked name="checkbox1" value="layer1" onclick="singleSelect2parent('checkbox_v1', 'checkbox1')">tiger_roads</p>
+    <p> <input type="checkbox" checked name="checkbox1" value="layer2" onclick="singleSelect2parent('checkbox_v1', 'checkbox1')">poly_landmarks</p>
+    <p> <input type="checkbox" checked name="checkbox1" value="layer3" onclick="singleSelect2parent('checkbox_v1', 'checkbox1')">poi</p>
+</ul>
+
+<p> <input type="checkbox" name="checkbox_v2" value="version2" onclick="allSelect('checkbox_v2', 'checkbox2')">版本二</p>
+<ul>
+    <p> <input type="checkbox" name="checkbox2" value="layer1" onclick="singleSelect2parent('checkbox_v2', 'checkbox2')" >tiger_roads</p>
+    <p> <input type="checkbox" name="checkbox2" value="layer2" onclick="singleSelect2parent('checkbox_v2', 'checkbox2')">poly_landmarks</p>
+    <p> <input type="checkbox" name="checkbox2" value="layer3" onclick="singleSelect2parent('checkbox_v2', 'checkbox2')">poi</p>
+</ul>
+</body>
+
+</html>

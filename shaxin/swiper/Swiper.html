@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<link rel="stylesheet" href="swiper-3.4.2.min.css" />
+<script src="swiper-3.4.2.min.js"></script>
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="../996/src/assets/img/1.jpg" /></div>
+				<div class="swiper-slide"><img src="../996/src/assets/img/2.jpg" /></div>
+				<div class="swiper-slide"><img src="../996/src/assets/img/3.jpg" /></div>
+				<div class="swiper-slide"><img src="../996/src/assets/img/2.jpg" /></div>
+				<div class="swiper-slide"><img src="../996/src/assets/img/3.jpg" /></div>
+				<div class="swiper-slide"><img src="../996/src/assets/img/2.jpg" /></div>
+				<div class="swiper-slide"><img src="../996/src/assets/img/3.jpg" /></div>
+				<div class="swiper-slide"><img src="../996/src/assets/img/2.jpg" /></div>
+				<div class="swiper-slide"><img src="../996/src/assets/img/3.jpg" /></div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</body>
+	
+<script>        
+//var mySwiper = new Swiper ('.swiper-container', {
+//  direction: 'horizontal',
+//  loop: true,
+//
+//  // 如果需要分页器
+//  pagination: '.swiper-pagination',
+//  
+//  // 如果需要前进后退按钮
+//  nextButton: '.swiper-button-next',
+//  prevButton: '.swiper-button-prev',
+//  
+//  // 如果需要滚动条
+//  scrollbar: '.swiper-scrollbar',
+//  autoplay:3000,
+//}) 
+  var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    loop:true,
+    slidesPerView: 3,
+    pagination: '.swiper-pagination',
+     nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    grabCursor: true,
+    paginationClickable: true,
+    autoplay: 1000
+});
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+		<title></title>
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/jquery-ui.css" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/aler.css" />
+		<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css" />
+	</head>
+
+	<body style="height: 100000px;">
+		<!--<form action="" method="post">-->
+
+		<div id="ale" style="z-index: 200;">
+			<div class="aler">
+				<h2 class="aler_title">新增
+					<span>
+						<i style="cursor: pointer;" class="fa fa-close" aria-hidden="true"></i>
+					</span>
+				</h2>
+				<div>
+					<p>姓名<input type="text" id="name" /></p>
+				</div>
+				<div class="sex">
+					性别&nbsp;&nbsp;
+					<input type="radio" name="sex" id="sex" />&nbsp;男
+					<input type="radio" name="sex" id="sex" />&nbsp;女
+				</div>
+				<div>年龄&nbsp;&nbsp;
+					<p id="age"><input type="text" value="0" />
+						<i class="minus">-</i>
+						<i class="add">+</i>
+					</p>
+				</div>
+				<div>
+					<p>生日<input type="text" id="datepicker" /></p>
+				</div>
+				<div>
+					<p>
+						</br>
+						地址</p>
+					<h4 style="position: relative">
+					<textarea name="" id="" cols="30" rows="5"></textarea></h4>
+				</div>
+				<div class="sub right">
+					<input type="button" name="cancel" id="cancel" value="取消" />
+					<input type="submit" value="提交" />
+				</div>
+			</div>
+		</div>
+		<div id="bgb" style="background: black;opacity: 0.4;"></div>
+		<!--</form>-->
+	</body>
+	<script src="../js/jquery-3.2.0.min.js"></script>
+	<script src="../js/jquery-ui.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/aler.js"></script>
+
+</html>

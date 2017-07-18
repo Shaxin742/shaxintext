@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="vue.js"></script>
+
+	<body>
+		<div id="example">
+			<!--{{mes}}-->
+			{{message}}
+		</div>
+		<script>
+			//			var vm = new Vue({
+			//				el: "#ex",
+			//				data:{
+			//					mes:"12"
+			//				}
+			//			})
+			//			vm.mes="new mes"
+			//			vm.$el.textContent === "new mes"
+			//			Vue.nextTick(function(){
+			//				vm.$el.textContent==="new message"
+			//			})
+
+			//			Vue.component("ex",{
+			//				template:"<span>{{ message }}</span>",
+			//				data:function(){
+			//					return{
+			//						message:"没有"
+			//					}
+			//				},
+			//				methods:{
+			//					updateMessage:function(){
+			//						this.message ="更新完成"
+			//						console.log(this.$el.textContent)
+			//						this.$nextTick(function(){
+			//							console.log(this.$el.textContent)
+			//						})
+			//					}
+			//				}
+			//			})
+			Vue.component('example', {
+				template: '<span>{{ message }}</span>',
+				data: function() {
+					return {
+						message: '没有更新'
+					}
+				},
+				methods: {
+					updateMessage: function() {
+						this.message = '更新完成'
+						console.log(this.$el.textContent) // => '没有更新'
+						this.$nextTick(function() {
+							console.log(this.$el.textContent) // => '更新完成'
+						})
+					}
+				}
+			})
+		</script>
+
+	</body>
+
+</html>

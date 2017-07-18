@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="vue.js"></script>
+	<body>
+		<div id="app">
+			<!--{{dd}}-->
+			<vm-v></vm-v>
+		</div>
+		<script>
+			var data = {
+				dd:'ss'
+			}
+			Vue.component("vm-v",{
+				template:'<div>{{ dd }}</div>',
+				data: function() {
+					return data
+				}
+			})
+			var app = new Vue({
+				el: "#app",
+//				template: '<span>{{ dd }}</span>'
+				
+			})
+		</script>
+		<div id="qq">
+			<djd></djd>
+		</div>
+		<script>
+			var data = {
+				ff:'ss'
+			}
+			Vue.component("djd",{
+				template:'<div v-once>{{ff}}</div>',
+				data:function(){
+					return data
+				}
+			})
+			var ap = new Vue({
+				el:"#qq",
+			})
+		</script>
+		<div id="v1">
+			{{v1}}
+		</div>
+		<script>
+			var vm = new Vue({
+				el:"#v1",
+				data:{
+					v1:"由于 Vue 不允许动态添加根级响应式属性，所以你必须在初始化实例前声明根级响应式属性，哪怕只是一个空值:"
+				}
+			})
+		</script>
+	</body>
+</html>

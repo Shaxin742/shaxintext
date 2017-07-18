@@ -1,0 +1,32 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+<title>js网页繁体简体转换</title>  
+<script language='javascript' src='lang.js'></script>  
+<script src="jquery-2.1.1.min.js"> </script>
+</head>  
+  
+<body>  
+  
+<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a>  
+<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a> <br><br>  
+<a id="QQQ" href="javascript:zh_tranBody();">asjdasdji</a>
+  
+网页繁体简体转换js网页繁体简体转换  
+增值电信业务经营许可证(琼)B2-20060032号 文网文[2009]162号 网络视听许可证2110566号 (琼)-经营性-2005-0002  
+  
+  <script>
+  	var i=0;
+  	$("#QQQ").click(function(){
+  		i++;
+  		console.log(i)
+  		if(i%2===0){
+  			$("#QQQ").find("a").attr("href",javascript:zh_tran('t'))
+  		}else{
+  			$("#QQQ").find("a").attr("href",javascript:zh_tran('s'))
+  		}
+  	})
+  </script>
+</body>  
+</html>  

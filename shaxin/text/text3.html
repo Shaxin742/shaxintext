@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+<input type="hidden" id="aaa" value="1"/>
+<select id="select" style="display:none">
+	<option>111</option>
+	<option>111</option>
+</select>
+<a href="javascript:void(0)"  onclick="ccc()">click me</a>
+</body>
+<script src="public/js/jquery-3.2.0.min.js"></script>
+<script>
+function ccc(){
+	var a=$("#aaa").val();
+	if(parseInt(a)%2 ==0){
+		alert(1)
+		$("#select").hide();
+	}else{
+	  alert(2)
+		$("#select").show();
+	}
+	$("#aaa").attr("value", parseInt(a)+1);
+	
+}
+</script>
+
+</html>

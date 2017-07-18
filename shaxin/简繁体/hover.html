@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		div{
+			height: 40px;
+			top: 40px;
+			position: relative;
+			margin: 0 auto;
+			background: red;
+			width: 40px;
+		}
+		h2{
+			position: absolute;
+			left: 40px;
+			top: 30px;
+			background: blue;
+			display: none;transition: all 1s;
+		}
+		
+		div:hover h2{
+			display: block;
+		}
+	</style>
+	<body>
+		<div>
+			<h2>shi</h2>
+		</div>
+	</body>
+	<script src="jquery-2.1.1.min.js"></script>
+	<script>
+		$("div").mouseover(function(){
+			$("h2").css("left","200px")
+		}).mouseout(function(){
+			$("h2").css("left","40px")
+		})
+	</script>
+</html>

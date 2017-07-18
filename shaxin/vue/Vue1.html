@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="vue.js"></script>
+	<body>
+		<div id="app">
+			{{me}}
+		</div>
+		<div id="app2">
+			<span v-bind:title="me">
+				asdasd
+			</span>
+		</div>
+		<div id="app3">
+			<ol>
+				<li v-for="todo in todos">
+					{{todo.text}}
+				</li>
+			</ol>
+		</div>
+	
+	<script>var vm = new Vue({
+	el: "#app",
+	data: {
+		me: "sss"
+	}
+})
+var app2 = new Vue({
+	el: "#app2",
+	data: {
+		me: "ahha" + new Date()
+	}
+})
+var app3 = new Vue({
+	el: "#app3",
+	data: {
+		todos: [{
+			text: "dddd"
+		}, {
+			text: "eee"
+		}]
+	}
+})</script>
+	<div id="app4">
+		<a href="http://www.baidu.com"><p>{{mes}}</p></a>
+		<input v-model="mes" />
+	</div>
+	<script>var app4 = new Vue({
+	el: "#app4",
+	data: {
+		mes: "ss"
+	}
+})</script>
+	<div id="app5">
+		 <ul>
+		 	<todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+		 </ul>
+	</div>
+	<script>Vue.component("todo-item", {
+	props: ['todo'],
+	template: '<li>{{ todo.text }}</li>'
+})
+var app5 = new Vue({
+	el: "#app5",
+	data: {
+		groceryList: [{
+				text: "蔬菜"
+			},
+			{
+				text: "撒旦"
+			}
+		]
+	}
+})</script>
+	<style>#app6 {
+	background: red;
+}</style>
+	<div id="app6">
+		<p v-on:click="ss">ssssssss</p>
+	</div>
+	<script>function ss() {
+	alert("ssss")
+}</script>
+	<!--<div id="app7">
+		{{data}}
+	</div>
+	<script>
+		var data = { a:1 }
+		var vm = new Vue({
+			el: "#app7",
+			data: data
+		})
+	</script>-->
+	
+	<div id="app8">
+		{{fullName}}
+	</div>
+	<script>
+		var vm=new Vue({
+			el:"#app8",
+			data:{
+				firstName: 'Foo',
+    			lastName: 'uu',
+//  			fullName: 'Foo Bar'
+			},
+			computed:{
+				fullName:function(){
+					return this.firstName+" "+this.lastName
+				}
+			}
+		})
+	</script>
+	<div v-if="Math.random() > 0.5">
+  Now you see me
+</div>
+<div v-else>
+  Now you don't
+</div>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<DOCTYPE html>
+	<html>
+		<meta charset="UTF-8"/>
+	<head>
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<meta charset="UTF-8">
+		<style>
+			.nav {
+				height: 40px;
+				width: 100%;
+				background: #E6E6E6;
+			}
+			
+			.nav ul li {
+				float: left;
+				list-style: none;
+				margin-right: 20px;
+				line-height: 40px;
+			}
+			
+			.nav ul li a {
+				text-decoration: none;
+				display: block;
+				width: 60px;
+				text-align: center;
+			}
+			
+			.onNav {
+				font-weight: bold;
+				color: #fff;
+				background: #ccc;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="#" class="onNav">首页</a>
+				</li>
+				<li>
+					<a href="#">博客</a>
+				</li>
+				<li>
+					<a href="#">论坛</a>
+				</li>
+				<li>
+					<a href="#">关于</a>
+				</li>
+				<li>
+					<a href="#">联系</a>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			$(".nav ul li a").click(function() {
+				if($(this).has(".onNav")) {
+					$(this).addClass("onNav").parent("li").siblings("li").find("a").removeClass("onNav");
+				}
+			})
+		</script>
+	</body>
+
+	</html>

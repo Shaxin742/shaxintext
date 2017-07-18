@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		li{
+			height: 50px;
+			background: red;
+		}
+		ul li div{
+			display: none;
+		}
+		.block{
+			display: block !important;
+			background: blue;
+		}
+	</style>
+	<body>
+		<ul id="q">
+			<li><div>ashfisaid</div>1</li>
+			<li><div>ashfisaid</div>2</li>
+			<li><div>ashfisaid</div>3</li>
+			<li><div>ashfisaid</div>4</li>
+			<li><div>ashfisaid</div>5</li>
+		</ul>
+	</body>
+	<script src="jq/jquery-3.2.0.min.js"></script>
+	<script>
+		$("#q li").bind("click",function(){
+			alert($(this).index())
+			$("#q li .block").removeClass("block")
+			$(this).find("div").addClass("block")
+		})
+	</script>
+</html>

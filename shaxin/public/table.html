@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/table.css" />
+		<!--<link rel="stylesheet" href="css/bootstrap.min.css" />-->
+	</head>
+
+	<body>
+		<header>
+			<div class="headerLeft">Admin</div>
+			<div class="headerRight">
+				<i class="fa fa-table" aria-hidden="true"></i>
+				<div class="headerUser">
+					<p>马大龙</p>
+					<img src="assets/img/user.png" />
+					<ul class="userMessage">
+						<li>我的消息</li>
+						<li style="border-bottom: 1px solid #000000;">设置</li>
+						<li>退出登录</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div id="main">
+			<style>
+				.child {
+					display: none;
+				}
+			</style>
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>导航一</a>
+						<ul class="child">
+							<li>
+								<a href="/">Table</a>
+							</li>
+							<li>
+								<a href="html/form.html">Form</a>
+							</li>
+							<li>
+								<a href="html/list.html">列表</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-address-card"></i>导航二</a>
+						<ul class="child">
+							<li>
+								<a href="#">页面4</a>
+							</li>
+							<li>
+								<a href="#">页面5</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-address-card-o"></i>导航三</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i>Charts</a>
+						<ul class="child">
+							<li>
+								<a href="#">echarts</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="table">
+				<h2>Table</h2>
+				<div class="tableSearch">
+					<input class="searchInput" type="text" placeholder="姓名" />
+					<input class="searchButton" type="button" value="查询" />
+					<input class="addButton" type="button" value="新增" />
+				</div>
+				<table border="0" cellspacing="0" cellpadding="0" border-collapse:collapse>
+					<tr style="border-bottom: 1px solid #bfcbd9;">
+						<th><input type="checkbox" name="checkbox_v1" id="tableCheck" value="version1" onclick="allSelect('checkbox_v1', 'checkbox1')" /></th>
+						<th width="50">#</th>
+						<th width="80">姓名
+							<i class="fa fa-sort-up"></i>
+							<i class="fa fa-sort-desc"></i>
+						</th>
+						<th width="100">性别
+							<i class="fa fa-sort-up"></i>
+							<i class="fa fa-sort-desc"></i></th>
+						<th width="120">年龄
+							<i class="fa fa-sort-up"></i>
+							<i class="fa fa-sort-desc"></i></th>
+						<th width="150">生日
+							<i class="fa fa-sort-up"></i>
+							<i class="fa fa-sort-desc"></i></th>
+						<th>地址</th>
+						<th width="80">操作</th>
+					</tr>
+					<tr>
+						<td width="40"><input type="checkbox" name="checkbox1" value="layer1" onclick="singleSelect2parent('checkbox_v1', 'checkbox1')"></td>
+						<td>1</td>
+						<td>沙鑫</td>
+						<td>男</td>
+						<td>24</td>
+						<td>94.10.24</td>
+						<td>大连大连大连大连大连大连大连大连大连大连大连</td>
+						<td>
+							<input type="button" value="编辑" />
+							<input type="button" value="删除" />
+						</td>
+					</tr>
+					<tr>
+						<td width="40"><input type="checkbox"  name="checkbox1" value="layer1" onclick="singleSelect2parent('checkbox_v1', 'checkbox1')"></td>
+						<td>1</td>
+						<td>沙鑫</td>
+						<td>男</td>
+						<td>24</td>
+						<td>94.10.24</td>
+						<td>大连大连大连大连大连大连大连大连大连大连大连</td>
+						<td>
+							<input type="button" value="编辑" />
+							<input type="button" value="删除" />
+						</td>
+					</tr>
+					<tr>
+						<td width="40"><input type="checkbox"  name="checkbox1" value="layer1" onclick="singleSelect2parent('checkbox_v1', 'checkbox1')"></td>
+						<td>1</td>
+						<td>沙鑫</td>
+						<td>男</td>
+						<td>24</td>
+						<td>94.10.24</td>
+						<td>大连大连大连大连大连大连大连大连大连大连大连</td>
+						<td>
+							<input type="button" value="编辑" />
+							<input type="button" value="删除" />
+						</td>
+					</tr>
+					<tr>
+						<td width="40"><input type="checkbox"  name="checkbox1" value="layer1" onclick="singleSelect2parent('checkbox_v1', 'checkbox1')"></td>
+						<td>1</td>
+						<td>沙鑫</td>
+						<td>男</td>
+						<td>24</td>
+						<td>94.10.24</td>
+						<td>大连大连大连大连大连大连大连大连大连大连大连</td>
+						<td>
+							<input type="button" value="编辑" />
+							<input type="button" value="删除" />
+						</td>
+					</tr>
+					<tr>
+						<td width="40"><input type="checkbox"  name="checkbox1" value="layer1" onclick="singleSelect2parent('checkbox_v1', 'checkbox1')"></td>
+						<td>1</td>
+						<td>沙鑫</td>
+						<td>男</td>
+						<td>24</td>
+						<td>94.10.24</td>
+						<td>大连大连大连大连大连大连大连大连大连大连大连</td>
+						<td>
+							<input type="button" value="编辑" />
+							<input type="button" value="删除" />
+						</td>
+					</tr>
+					<tr>
+						<td width="40"><input type="checkbox"  name="checkbox1" value="layer1" onclick="singleSelect2parent('checkbox_v1', 'checkbox1')"></td>
+						<td>1</td>
+						<td>沙鑫</td>
+						<td>男</td>
+						<td>24</td>
+						<td>94.10.24</td>
+						<td>大连大连大连大连大连大连大连大连大连大连大连</td>
+						<td>
+							<input type="button" value="编辑" />
+							<input type="button" value="删除" />
+						</td>
+					</tr>			
+					<tr>
+						<td width="40"><input type="checkbox"  name="checkbox1" value="layer1" onclick="singleSelect2parent('checkbox_v1', 'checkbox1')"></td>
+						<td>1</td>
+						<td>沙鑫</td>
+						<td>男</td>
+						<td>24</td>
+						<td>94.10.24</td>
+						<td>大连大连大连大连大连大连大连大连大连大连大连</td>
+						<td>
+							<input type="button" value="编辑" />
+							<input type="button" value="删除" />
+						</td>
+					</tr>
+					<tr>
+						<td width="40"><input type="checkbox"  name="checkbox1" value="layer1" onclick="singleSelect2parent('checkbox_v1', 'checkbox1')"></td>
+						<td>1</td>
+						<td>沙鑫</td>
+						<td>男</td>
+						<td>24</td>
+						<td>94.10.24</td>
+						<td>大连大连大连大连大连大连大连大连大连大连大连</td>
+						<td>
+							<input type="button" value="编辑" />
+							<input type="button" value="删除" />
+						</td>
+					</tr>
+				</table>
+				<div class="table_delete">
+					<span>批量删除</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="aler">
+			<strong>新增</strong>
+			<div>
+				<p>姓名<input type="text" /></p>
+			</div>
+			<div>
+				<p>男<input type="radio" name="sex" /></p>
+				<p>女<input type="radio" name="sex" /></p>
+			</div>
+			<div>
+				<p>年龄<input type="text" value="0" /></p>
+			</div>
+			<div>
+				<p>生日<input type="text" id="datepicker" /></p>
+			</div>
+			<input type="button" name="cancel" id="cancel" value="取消" />
+			<input type="submit" value="提交" />
+		</div>
+	</body>
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		
+	</script>
+
+</html>

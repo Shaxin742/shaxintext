@@ -1,0 +1,25 @@
+.right { float: right; }
+
+#ale { position: absolute; background: black; }
+#ale .aler { border: 1px solid #ccc; height: 480px; width: 574px; background: white; position: absolute; z-index: 200; }
+#ale .aler h2 { font-size: 18px; margin-left: 20px; }
+#ale .aler h2 i { float: right; color: #ccc; margin-right: 20px; }
+#ale .aler div { margin-left: 46px; color: #48576a; }
+#ale .aler div p { font-size: 14px; display: inline-block; }
+#ale .aler div p input { height: 35px; border-radius: 5px; border: 1px solid #bfcbd9; margin-left: 12px; padding-left: 1em; }
+#ale .aler div textarea { margin-left: 12px; }
+#ale .aler #sex { background: white; }
+#ale .aler #sex input { height: 20px; }
+#ale .aler .sub { margin-right: 30px; margin-top: 60px; }
+#ale .aler .sub input { height: 34px; width: 58px; border: 1px solid #ccc; border-radius: 4px; }
+#ale .aler .sub input:nth-child(1) { background: white; }
+#ale .aler .sub input:nth-child(1):hover { color: #20A0FF; border-color: #20A0FF; }
+#ale .aler .sub input:nth-child(2) { background: #20a0ff; color: white; }
+#ale .aler #age { border: 1px solid #ccc; border-radius: 5px; }
+#ale .aler #age p { margin-left: 5px; }
+#ale .aler #age input { margin: 0; width: 120px; height: 39px; border: none; }
+#ale .aler #age i { height: 39px; cursor: pointer; font-size: 24px; padding: 0px 10px; display: inline-block; color: #ccc; border-left: 1px solid #ccc; }
+#ale .aler .textare { line-height: 30px; font-size: 14px; display: inline-block; }
+#ale .aler textarea { position: absolute; top: -56px; left: 28px; }
+
+/*# sourceMappingURL=aler.css.map */

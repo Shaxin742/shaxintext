@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div {
+			width: 200px
+		}
+		
+		.bgblue {
+			background: blue;
+			border:1px solid  blue;
+		}
+		
+		.borblue {
+			border: blue;
+		}
+		
+		span {
+			position: relative;
+			display:inline-block;
+			height: 30px;
+			width: 30px;
+			border: 1px solid grey;
+		}
+		span:hover{
+			border: 1px solid red;
+		}
+		input {
+			position: absolute;
+			height: 20px;
+			width:20px;
+			left: -999px;
+			/*opacity: 0;*/
+		}
+	</style>
+
+	<body>
+		<div style="margin: 200px auto;">
+			<span><input type="checkbox" /></span>
+			<span><input type="checkbox" /></span>
+		</div>
+	</body>
+	<script src="jquery-3.2.0.min.js"></script>
+	<script>
+		$("span").click(function(){
+			$("div").find("span").removeClass("bgblue")
+			$(this).addClass("bgblue")
+		})
+	</script>
+</html>

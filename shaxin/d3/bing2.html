@@ -1,0 +1,253 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="utf-8">  
+    <title>Pie Chart</title>  
+    <!--<link rel="stylesheet" type="text/css" href="css/styles.css"/>-->  
+    <script src="https://d3js.org/d3.v4.min.js"></script> 
+    <script type="text/javascript" src="jquery-3.2.0.min.js"></script>  
+</head>  
+  
+<body>  
+  
+<script type="text/javascript">  
+    function pieChart() {  
+        var _chart = {};  
+  
+        var _width = 650, _height = 500,  
+                _data = [],  
+                _colors, // = d3.scale.category10(),  
+                _names = [],    //keep name list for the chart  
+                _svg,  
+                _bodyG,  
+                _pieG,  
+                _radius = 200,  
+                _innerRadius = 100;  
+  
+        _chart.render = function () {  
+            if (!_svg) {  
+                _svg = d3.select("body").append("svg")  
+                        .attr("height", _height)  
+                        .attr("width", _width);  
+            }  
+  
+            renderBody(_svg);  
+        };  
+  
+        function renderBody(svg) {  
+            if (!_bodyG)  
+                _bodyG = svg.append("g")  
+                        .attr("class", "body");  
+  
+            renderPie();  
+        }  
+  
+        function renderPie() {  
+            var pie = d3.layout.pie()  
+                    .value(function (d) {  
+                        return d.value;  
+                    });  
+  
+            var arc = d3.svg.arc()  
+                    .outerRadius(_radius)  
+                    .innerRadius(_innerRadius);  
+  
+            if (!_pieG)  
+                _pieG = _bodyG.append("g")  
+                        .attr("class", "pie")  
+                        .attr("transform", "translate("   
+                            + _radius   
+                            + ","   
+                            + _radius + ")");  
+  
+            renderSlices(pie, arc);  
+  
+            renderLegend();  
+        }  
+  
+        function renderSlices(pie, arc) {  
+            var slices = _pieG.selectAll("path.arc")  
+                    .data(pie(_data));  
+  
+            slices.enter()  
+                    .append("path")  
+                    .attr("class", "arc")  
+                    .attr("fill", function (d, i) {  
+                        return _colors(_names[i]);  
+                    });  
+  
+            slices.transition()  
+                    .attrTween("d", function (d) {  
+                        var currentArc = this.__current__;  
+  
+                        if (!currentArc)  
+                            currentArc = {startAngle: 0,   
+                                            endAngle: 0};  
+  
+                        var interpolate = d3.interpolate(  
+                                            currentArc, d);  
+                                              
+                        this.__current__ = interpolate(1);  
+                          
+                        return function (t) {  
+                            return arc(interpolate(t));  
+                        };  
+                    });  
+        }  
+          
+      //render legend at the bottom of the chart  
+        function renderLegend(){  
+            var legend = _svg.selectAll(".legend")  
+                .data(_colors.domain())  
+                .enter()  
+                .append("g")  
+                .attr("class", "legend")  
+                .attr("transform", function(d, i) {  
+                    var legendX = 450;   //set position for each legend element  
+                    var legendY = 30 * i + 120;  
+                    return "translate(" + legendX + ", " + legendY + ")";  
+                });  
+              
+            legend.append("rect")  
+                .attr("x", 0)  
+                .attr("y", 1)  
+                .attr("width", 16)  
+                .attr("height", 8)  
+                .style("fill", _colors);  
+              
+            legend.append("text")  
+                .attr("x", 20)  
+                .attr("y", 9)  
+                .classed("legendtext", true)  
+                .text(function(d) {  
+                    return d;  
+                });  
+        }  
+  
+        _chart.width = function (w) {  
+            if (!arguments.length) return _width;  
+            _width = w;  
+            return _chart;  
+        };  
+  
+        _chart.height = function (h) {  
+            if (!arguments.length) return _height;  
+            _height = h;  
+            return _chart;  
+        };  
+  
+        _chart.colors = function (c) {  
+            if (!arguments.length) return _colors;  
+            _colors = c;  
+            return _chart;  
+        };  
+          
+      //set name list function  
+        _chart.names = function (n) {  
+            if (!arguments.length) return _names;  
+            _names = n;  
+            return _chart;  
+        };  
+  
+        _chart.radius = function (r) {  
+            if (!arguments.length) return _radius;  
+            _radius = r;  
+            return _chart;  
+        };  
+  
+        _chart.innerRadius = function (r) {  
+            if (!arguments.length) return _innerRadius;  
+            _innerRadius = r;  
+            return _chart;  
+        };  
+  
+        _chart.data = function (d) {  
+            if (!arguments.length) return _data;  
+            _data = d;  
+            return _chart;  
+        };  
+  
+        return _chart;  
+    }  
+  
+    function randomData() {  
+        return Math.random() * 9 + 1;  
+    }  
+  
+    function update() {  
+        for (var j = 0; j < data.length; ++j)  
+            data[j].value = randomData();  
+  
+        chart.render();  
+    }  
+      
+    d3.text("data/health-service-quantity-2.json", function(rawdatastr){  
+        //transform data to proper format  
+        var rawdata = JSON.parse(rawdatastr);  
+        var names = d3.keys(rawdata);  
+        var sublists = [];  
+        names.forEach(function(name){  
+            var sublist = rawdata[name].map(function(d){  
+                return {  
+                    name: name,  
+                    value: Math.round((d.value * 1000)/d.number)   
+                }  
+            });  
+            sublists.push(sublist);  
+        });  
+        var list = sublists[0].map(function(d, j){  
+            var l = [];  
+            for(var i = 0; i < sublists.length; i++){  
+                l.push(sublists[i][j]);  
+            }  
+            return l;  
+        });  
+          
+        var timeformat = d3.time.format("%Y-%m");  
+        var dates = rawdata[names[0]].map(function(d){  
+            return timeformat.parse(d.date);  
+        });  
+          
+        //periodly render the pie chart  
+        var len = list.length;  
+        var n = 0;  
+        var data = list[n];  
+        var chart = pieChart()  
+            .radius(200)  
+            .innerRadius(0)  
+            .data(data);  
+          
+        var date = dates[n];  
+        $("#year").html(date.getFullYear());  
+        $("#month").html(date.getMonth()+1);  
+          
+        chart.names(names);  
+        chart.colors(d3.scale.category20().domain(names));  
+        chart.render();  
+          
+        var handle = setInterval(function(){  
+            ++n;  
+              
+            var date = dates[n];  
+            $("#year").html(date.getFullYear());  
+            $("#month").html(date.getMonth()+1);  
+              
+            chart.data(list[n]);  
+            chart.render();  
+                
+            if(n >= (len - 1)){  
+                clearInterval(handle);  
+            }  
+        }, 1000);  
+      
+    });  
+</script>  
+  
+<div class="control-group">  
+    <span id="year"></span> 年  
+    <span id="month"></span> 月  
+</div>  
+  
+</body>  
+  
+</html>  

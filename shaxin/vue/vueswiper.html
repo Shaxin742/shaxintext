@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="vue.js"></script>
+		<template>
+    <div class="lunbo" :class="name" :style="{height: h+'rem'}">
+    <div class="swiper-container" v-if="type==1">
+      <div class="fuck swiper-wrapper">
+        <div class="swiper-slide" v-for="item in banners">
+          <img :src="item">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+ 
+    <div class="swiper-container" v-if="type==2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="item in banners">
+          <a :href="item.turnUrl"><img :src="item.img"></a>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+ 
+    <div class="swiper-container" v-if="type==3">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="item in banners">
+          <a :href="item.turnUrl">{{item.content}}</a>
+        </div>
+      </div>
+      <div class="swiper-pagination" v-show="false"></div>
+    </div>
+    </div>
+</template>
+ 
+<script>
+import 'swiper/dist/idangerous.swiper.css'
+import Swiper from 'swiper/dist/idangerous.swiper.js'
+export default {
+  props: ['banners','type','h','name'],
+  data () {
+    return {}
+  },
+  watch: {
+  },
+  mounted: function () {
+    let vm = this;
+    new Swiper('.'+vm.name+' .swiper-container', {
+      loop: true,
+      autoplay: 4000,
+      updateOnImagesReady : true,
+      autoplayDisableOnInteraction : false,
+      pagination: '.'+vm.name+' .swiper-pagination',
+    })
+  }
+}
+</script>
+<style>
+/*没有分页器 加scoped不会错  */
+  a{
+    cursor: pointer;
+  }
+  .lunbo{
+    margin: 0 auto;
+    position: relative;
+  }
+  .swiper-container{
+    height: 100%;
+  }
+  .swiper-slide{
+    height: 100%;
+    color: white;
+  }
+  .swiper-pagination {
+    position: absolute;
+    z-index: 20;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+/*分页器的样式*/
+  .swiper-pagination-switch {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background: #6d6df8;
+    margin: 0 5px;
+    opacity: 0.8;
+    border: 1px solid #fff;
+    cursor: pointer;
+  }
+  .swiper-active-switch {
+    background: #fff;
+  }
+</style>
+	</body>
+</html>

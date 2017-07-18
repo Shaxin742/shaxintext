@@ -1,0 +1,145 @@
+<!DOCTYPE>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jQuery多级下拉菜单</title>
+		<script src="../public/js/jquery-3.2.0.min.js"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul,
+			li {
+				list-style: none;
+				font-size: 12px;
+				line-height: 55px;
+				width: 80px;
+				margin: 0;
+				/*padding-left: 6px;*/
+			}
+			
+			.child a,
+			li a {
+				background: cornflowerblue;
+				display: block;
+			}
+			
+			li {
+				background: cornflowerblue;
+			}
+			li:hover{
+				background: yellow;
+			}
+			a:hover{
+				background: yellow;
+			}
+			
+			.child {
+				display: none;
+			}
+			/*.nav a {
+				display: block;
+				color: #5c84c1;
+				padding-left: 22px;
+			}*/
+		</style>
+	</head>
+
+	<body>
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="#">导航一</a>
+					<ul class="child">
+						<li>
+							<a href="#">Table</a>
+						</li>
+						<li>
+							<a href="#">Form</a>
+						</li>
+						<li>
+							<a href="#">列表</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">导航二</a>
+					<ul class="child">
+						<li>
+							<a href="#">页面4</a>
+						</li>
+						<li>
+							<a href="#">页面5</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">导航三</a>
+					<ul class="child">
+						<li>
+							<a href="#">二级菜单1</a>
+						</li>
+						<li>
+							<a href="#">二级菜单1</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		//说明 所有的元素以ul li ul li ul li的循环格式嵌套 如果没有下级分类 就用li a结束嵌套  
+		$(document).ready(function() {
+			//$(".nav ul li").children("ul").hide();
+			$(".nav").find("li").not(":has(ul)").children("a")
+//			.css({
+//					textDecoration: "none",
+//					color: "#333",
+//					background: "none"
+//				})
+				.click(function() {
+					$(this).get(0).location.href = "'" + $(this).attr("href") + "'";
+				});
+			$(".nav").find("li:has(ul)").children("a")
+//				.css({
+//					background: "url(images/statu_close.gif) no-repeat left top;"
+////					background:"cornflowerblue"
+//				})
+				.click(function() {
+					if($(this).next("ul").is(":hidden")) {
+						$(this).next("ul").slideDown("slow");
+						if($(this).parent("li").siblings("li").children("ul").is(":visible")) {
+							$(this).parent("li").siblings("li").find("ul").slideUp("1000");
+//							$(this).parent("li").siblings("li:has(ul)").children("a")
+//							.css({
+//									background: "url(images/statu_close.gif) no-repeat left top;"
+//								})
+//								.end().find("li:has(ul)").children("a").css({
+//									background: "url(images/statu_close.gif) no-repeat left top;"
+//								});
+						}
+//						$(this)
+//						.css({
+//							background: "url(images/statu_open.gif) no-repeat left top;"
+//						});
+						return false;
+					} else {
+						$(this).next("ul").slideUp("normal");
+//						$(this)
+//						.css({
+//							background: "url(images/statu_close.gif) no-repeat left top;"
+//						});
+						$(this).next("ul").children("li").find("ul").fadeOut("normal");
+						$(this).next("ul").find("li:has(ul)").children("a").css({
+							background: "url(images/statu_close.gif) no-repeat left top;"
+						});
+						return false;
+					}
+				});
+		});
+	</script>
+
+</html>

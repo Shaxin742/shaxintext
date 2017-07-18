@@ -1,0 +1,55 @@
+.flt { float: left; }
+
+.frt { float: right; }
+
+.mal20 { margin-left: 20px; }
+
+header { height: 60px; background: #20a0ff; line-height: 60px; }
+header .headerLeft { float: left; font-size: 22px; color: white; width: 230px; border-right: 1px solid white; padding-left: 20px; }
+header .headerRight i { display: inline-block; line-height: 60px; color: white; margin-left: 20px; font-size: 20px; }
+header .headerRight .headerUser { float: right; height: 60px; line-height: 60px; padding-right: 20px; }
+header .headerRight .headerUser p { float: left; padding-right: 20px; color: white; font-weight: bold; font-size: 14px; }
+header .headerRight .headerUser img { height: 40px; border-radius: 50%; margin-top: 10px; }
+header .headerRight .headerUser .userMessage { z-index: 20; width: 100px; border: 1px solid #ccc; display: none; position: absolute; top: 60px; right: 20px; background: white; }
+header .headerRight .headerUser .userMessage li { text-align: center; height: 48px; line-height: 48px; font-weight: bold; }
+header .headerRight .headerUser .userMessage li:hover { background: gray; }
+header .headerRight .headerUser:hover .userMessage { display: block; transition: all 2s; }
+
+#main { margin-left: 1px; height: 100%; }
+#main .table { margin-left: 270px; }
+#main .table h2 { font-size: 22px; height: 46px; line-height: 46px; }
+#main .table .tableSearch { height: 56px; background: #f2f2f2; line-height: 56px; padding-left: 20px; }
+#main .table .tableSearch .searchInput { height: 34px; border: 1px solid #bfcbd9; color: #bfcbd9; padding-left: 1em; border-radius: 4px; }
+#main .table .tableSearch .searchButton, #main .table .tableSearch .addButton { background: #20a0ff; color: white; border-radius: 6px; border: none; width: 50px; height: 36px; margin-left: 10px; line-height: 36px; }
+#main .table table { border: 1px solid #bfcbd9; width: 100%; margin-top: 20px; padding-bottom: 20px; min-width: 860px; }
+#main .table table tr { height: 40px; border-bottom: 1px solid #bfcbd9; }
+#main .table table tr input[type=checkbox] { height: 18px; width: 18px; }
+#main .table table tr td, #main .table table tr th { border-bottom: 1px solid #bfcbd9; text-decoration: none; }
+#main .table table th { text-align: left; position: relative; }
+#main .table table th i { position: absolute; left: 30px; }
+#main .table table th i:first-child { top: 24px; }
+#main .table table th i:last-child { bottom: 20px; }
+#main .table table th:last-child, #main .table table td:last-child { line-height: 60px; min-width: 100px; }
+#main .table table th:last-child input, #main .table table td:last-child input { border-radius: 5px; height: 28px; width: 40px; float: left; margin-right: 10px; }
+#main .table table th:last-child input:first-child, #main .table table td:last-child input:first-child { border: 1px solid #cdcdcd; background: white; }
+#main .table table th:last-child input:last-child, #main .table table td:last-child input:last-child { background: #ff4949; color: white; border: none; }
+#main .table table td:first-child, #main .table table th:first-child { padding-left: 20px; }
+#main .table table input:checked { color: blue; background: blue; }
+#main .table table td:nth-child(7) { min-width: 140px; }
+#main .table table tr:hover { background: #edf7ff; }
+#main .table table tr:first-child { background: #eef1f6; }
+#main .nav { width: 248px; background: #e4e8f1; float: left; }
+#main .nav li a { background: #eef1f6; display: block; padding: 0 20px; line-height: 56px; font-size: 14px; }
+#main .nav li a i { margin: 0 10px; }
+#main .nav li a:hover { background: #d1dbe5; }
+#main .nav li:hover { background: #d1dbe5; }
+#main .nav .child { display: none; }
+#main .nav .child a { background: #e4e8f1 !important; text-indent: 30px; }
+#main .table_delete { height: 56px; background: #f2f2f2; line-height: 56px; margin-top: 10px; }
+#main .table_delete span { height: 36px; width: 88px; background: #ff4949; color: white; font-size: 14px; padding: 11px; border-radius: 4px; margin-left: 10px; }
+
+.aler { width: 574px; height: 480px; background: white; border-radius: 4px; }
+
+.onNav { color: #20a0ff; }
+
+/*# sourceMappingURL=table.css.map */

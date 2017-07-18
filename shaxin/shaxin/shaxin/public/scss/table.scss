@@ -1,0 +1,246 @@
+.flt {
+    float: left;
+}
+
+.frt {
+    float: right;
+}
+
+.mal20 {
+    margin-left: 20px;
+}
+
+header {
+    height: 60px;
+    background: #20a0ff;
+    line-height: 60px;
+    .headerLeft {
+        float: left;
+        font-size: 22px;
+        color: white;
+        width: 230px;
+        border-right: 1px solid white;
+        padding-left: 20px;
+    }
+    .headerRight {
+        i {
+            display: inline-block;
+            line-height: 60px;
+            color: white;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        .headerUser {
+            float: right;
+            height: 60px;
+            line-height: 60px;
+            padding-right: 20px;
+            p {
+                float: left;
+                padding-right: 20px;
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+            }
+            img {
+                height: 40px;
+                border-radius: 50%;
+                margin-top: 10px;
+            }
+            .userMessage {
+                z-index: 20;
+                width: 100px;
+                border: 1px solid #ccc;
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: white;
+                li {
+                    text-align: center;
+                    height: 48px;
+                    line-height: 48px;
+                    font-weight: bold;
+                }
+                li:hover {
+                    background: gray;
+                }
+            }
+        }
+        .headerUser:hover .userMessage {
+            display: block;
+            transition: all 2s;
+        }
+    }
+}
+
+#main {
+    margin-left: 1px;
+    height: 100%;
+    .table {
+        margin-left: 270px;
+        h2 {
+            font-size: 22px;
+            height: 46px;
+            line-height: 46px;
+        }
+        .tableSearch {
+            height: 56px;
+            background: #f2f2f2;
+            line-height: 56px;
+            padding-left: 20px;
+            .searchInput {
+                height: 34px;
+                border: 1px solid #bfcbd9;
+                color: #bfcbd9;
+                padding-left: 1em;
+                border-radius: 4px;
+            }
+            .searchButton,
+            .addButton {
+                background: #20a0ff;
+                color: white;
+                border-radius: 6px;
+                border: none;
+                width: 50px;
+                height: 36px;
+                margin-left: 10px;
+                line-height: 36px;
+            }
+        }
+        table {
+            border: 1px solid #bfcbd9;
+            width: 100%;
+            margin-top: 20px;
+            padding-bottom: 20px;
+            min-width: 860px;
+            //          height: 500px;
+            tr {
+                height: 40px;
+                border-bottom: 1px solid #bfcbd9;
+                input[type=checkbox] {
+                    height: 18px;
+                    width: 18px;
+                }
+                td,
+                th {
+                    //              margin: 0 20px;
+                    border-bottom: 1px solid #bfcbd9;
+                    text-decoration: none;
+                }
+            }
+            th {
+                text-align: left;
+                position: relative;
+                i {
+                    position: absolute;
+                    left: 30px;
+                }
+                i:first-child {
+                    top: 24px;
+                }
+                i:last-child {
+                    bottom: 20px;
+                }
+            }
+            th:last-child,
+            td:last-child {
+                //              float: right;
+                line-height: 60px;
+                min-width: 100px;
+                input {
+                    border-radius: 5px;
+                    height: 28px;
+                    width: 40px;
+                    float: left;
+                    margin-right: 10px;
+                }
+                input:first-child {
+                    border: 1px solid #cdcdcd;
+                    background: white;
+                }
+                input:last-child {
+                    background: #ff4949;
+                    color: white;
+                    border: none;
+                }
+            }
+            td:first-child,
+            th:first-child {
+                padding-left: 20px;
+            }
+            input:checked {
+                color: blue;
+                background: blue;
+            }
+            td:nth-child(7) {
+                min-width: 140px;
+            }
+            tr:hover {
+                background: #edf7ff;
+            }
+            tr:first-child {
+                background: #eef1f6;
+            }
+            
+        }
+    }
+    .nav {
+        //      float: left;
+        width: 248px;
+        background: #e4e8f1;
+        float: left;
+        li {
+            a {
+                background: #eef1f6;
+                display: block;
+                padding: 0 20px;
+                line-height: 56px;
+                font-size: 14px;
+                i {
+                    margin: 0 10px;
+                }
+            }
+            a:hover {
+                background: #d1dbe5;
+            }
+        }
+        li:hover {
+            background: #d1dbe5;
+        }
+        .child {
+            display: none;
+            a {
+                background: #e4e8f1 !important;
+                text-indent: 30px;
+            }
+        }
+    }
+    .table_delete {
+        height: 56px;
+        background: #f2f2f2;
+        line-height: 56px;
+        margin-top: 10px;
+        span {
+            height: 36px;
+            width: 88px;
+            background: #ff4949;
+            color: white;
+            font-size: 14px;
+            padding: 11px;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+    }
+}
+
+.aler {
+    width: 574px;
+    height: 480px;
+    background: white;
+    border-radius: 4px;
+}
+
+.onNav {
+    color: #20a0ff;
+}

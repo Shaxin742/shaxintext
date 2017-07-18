@@ -1,0 +1,105 @@
+.right {
+    float: right;
+}
+
+#ale {
+    position: absolute;
+    background: black;
+//  opacity: 0.3;
+    .aler {
+        border: 1px solid #ccc;
+        height: 480px;
+        width: 574px;
+        background: white;
+         position: absolute;
+         z-index: 200;
+//      padding: 20px;
+        h2{
+            font-size: 18px;
+            margin-left: 20px;
+            i{
+            float: right;
+            color: #ccc;
+            margin-right: 20px;
+        }
+        }
+        
+        div {
+            margin-left: 46px;
+            color: #48576a;
+            p {
+                font-size: 14px;
+                display: inline-block;
+                //             width: ;
+                input {
+                    height: 35px;
+                    border-radius: 5px;
+                    border: 1px solid #bfcbd9;
+                    margin-left: 12px;
+                    padding-left: 1em;
+                }
+            }
+            textarea {
+                margin-left: 12px;
+            }
+        }
+         #sex{
+            background: white;
+            input{
+                height:20px;
+            };
+        }
+        .sub {
+            margin-right: 30px;
+            margin-top: 60px;
+            input{
+                height: 34px;
+                width:58px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            input:nth-child(1){
+                background: white;
+            }input:nth-child(1):hover{
+                color: #20A0FF;
+                border-color: #20A0FF;
+            }
+            input:nth-child(2){
+                background: #20a0ff;
+                color: white;
+            }
+        }
+        #age{
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            p{
+                margin-left: 5px;
+            }
+            input{
+                margin: 0;
+                width: 120px;
+                height: 39px;
+                border: none;   
+            };
+            i{
+                height: 39px;
+                cursor: pointer;
+                font-size: 24px;
+                padding:0px 10px;
+                display: inline-block;
+                color: #ccc;
+                border-left: 1px solid #ccc;
+            }
+        }
+        .textare{
+            line-height: 30px;
+            font-size: 14px;
+            display: inline-block;
+        }
+        textarea{
+            position: absolute;
+            top: -56px;
+            left: 28px;
+        }
+    }
+}

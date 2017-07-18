@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="src/js/vue.js"></script>
+	</head>
+<body>
+	<ul id="app">
+		<template v-for="item in title">
+			<li>{{item.text}}</li>
+		</template>
+	<ul>
+
+<script>
+	var vm=new Vue({
+		el:"#app",
+		data:{
+			title:[{
+				text:'ss'
+			},{
+				text:'dd'
+			}]
+		}
+	})
+</script>
+</body>
+<style>
+</style>
+
+</html>

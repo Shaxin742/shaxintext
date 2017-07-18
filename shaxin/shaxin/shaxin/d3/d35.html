@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script>
+			var dataset = [3];
+			var p =d3.select("body").selectAll("p")
+			var update = p.data(dataset);
+			var exit = update.exit();
+			update.text(function(d){
+				return "update" +d;
+			})
+			exit.text(function(d){
+				return "exit";
+			})
+		</script>
+	</body>
+</html>

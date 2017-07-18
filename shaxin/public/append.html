@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.2.0.min.js">
+		</script>
+		<script>
+			//			$(document).ready(function() {
+			//				var body = document.querySelector("body");
+			//				var node = document.createElement("div")
+			//				node.className = "ss"
+			//				body.appendChild(node);
+			//			})
+			
+			 $(document).ready(function(){
+			 	 var div = document.createTextNode('test123');
+			 	 div.className = "ss"
+			 	$("p").append(div)
+			 })
+			
+		</script>
+	</head>
+	<p></p>
+	<style>
+		.ss {
+			height: 200px;
+			width: 200px;
+			background: red;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			margin-top: -100px;
+			margin-left: -100px;
+			background: url(assets/img/user.png);
+		}
+		div{
+			background: red;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+
+	<body>
+	</body>
+
+</html>

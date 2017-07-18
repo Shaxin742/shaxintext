@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ajajajaja dsajd;asj dkasjdkl jaskllaksjd lkasjlkda</title>
+	</head>
+	<script src="vue.js"></script>
+
+	<body>
+		<div id="dd">{{ fullName }}</div>
+		<script>
+			//			var vm = new Vue({
+			//				el: "#dd",
+			//				data: {
+			//					firstName: 'Foo',
+			//					lastName: 'Bar',
+			//					fullName: 'Foo bar'
+			//				},
+			//				watch: {
+			//					firstName: function(val) {
+			//						this.fullName = val + ' ' + this.lastName
+			//					},
+			//					lastName: function(val) {
+			//						this.fullName = this.firstName + ' ' + val
+			//					}
+			//				}
+			//			})
+			var vm = new Vue({
+				el: '#dd',
+				data: {
+					firstName: 'Foo',
+					lastName: 'Bar'
+				},
+				computed: {
+					fullName: function() {
+						return this.firstName + ' ' + this.lastName
+					}
+				}
+			})
+		</script>
+		<div id="if">
+			<div v-if="Math.random() > 0.5">
+				Now you see me
+			</div>
+			<div v-else>
+				Now you don't
+			</div>
+		</div>
+		<script>
+			var vm = new Vue({
+				el: "#if",
+				data: {},
+				
+			})
+			console.log(Math.random())
+		</script>
+	</body>
+
+</html>

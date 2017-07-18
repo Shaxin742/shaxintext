@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="vue.js"> </script>
+	<body>
+		<div id="v1">
+			<button v-on:click="te()">点击</button>
+		</div>
+		<script>
+			new Vue({
+				el:"#v1",
+				methods:{
+					function te(){
+						alert("S")
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+#menu{
+    width:230px
+}
+#form{
+    margin-left: 260px;
+    h2{
+        width: 100%;
+        font-size: 16px;
+        p{
+            display: inline-block;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        p:last-child{
+            float: right;
+            span{
+                color: #ccc;
+                font-weight: normal;
+            };
+        }
+    }
+    div{
+        height: 40px;
+        line-height: 34px;
+        margin-left: 30px;
+        font-weight: bold;
+        position: relative;
+        input{
+            border:1px solid #ccc;
+            height: 28px;
+//          min-width: 200px;
+            margin-left: 20px;
+//          width: 100%;
+            border-radius: 5px;
+        }
+        select{
+            height: 32px;
+            background: white;
+            color: #ccc;
+            margin-left: 20px;
+            width:72px;
+            border: 1px solid #CCCCCC;
+            border-radius: 10px;
+        }
+        h3{
+            font-size: 14px;
+            display: inline-block;
+            line-height: 23px;
+            input{
+                float: left;
+                height: 15px;
+                width: 15px;
+                margin-left: 5px;
+            }
+        }
+        textarea{
+            position: absolute;
+            top: 15px;
+            left: 75px;
+        }
+    }
+    button:nth-child(1){
+        background: #20a0ff;
+        color: white;
+    };
+    button:nth-child(2){
+        background: white;
+    };
+}
+.btn1{
+    background: #20a0ff;
+    border-radius: 4px;
+    border: none;
+    height: 30px;
+    margin-top: 90px;
+    margin-left: 60px;
+    width: 90px;
+    color: white;
+}
+.btn2{
+    background: white;
+    border: 1px solid #ccc;
+    height: 30px;
+    width:90px;
+}

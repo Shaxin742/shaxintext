@@ -1,0 +1,109 @@
+<!doctype html>
+  2 <html>
+  3 <head>
+  4 <meta charset="utf-8">
+  5 <title>无标题文档</title>
+  6 <style>
+  7 /*让图片把包含图片和文字的div占满，让文字div溢出隐藏*/
+  8 #mm{
+  9     width:1270px;   /*调节宽度让他居中*/
+ 10     overflow:hidden;  /*他的子div把这个div撑开*/
+ 11     margin:0 auto;
+ 12     }
+ 13 .pro img{
+ 14     width:100%;   /*让这个图片的宽高占他父div的宽高和父div的宽高一样*/
+ 15     height:100%;
+ 16     display:block;/*让这个图片成为盒子模型成为一个div*/
+ 17 }
+ 18 .pro{
+ 19     border:1px dashed #B8B4B4;
+ 20     width:300px;/*设置大div的宽高*/
+ 21     height:150px;
+ 22     padding:2px;/*让图片和他的父div中间有空隙*/
+ 23     overflow:hidden;/*隐藏溢出的文字div*/
+ 24     float:left;/*让这个div左对齐*/
+ 25     margin:5px;/*让这个div四周都有5px空隙*/
+ 26 }
+ 27 div.pro div{
+ 28     position:relative;/*相对定位div移走后还占有原来的位置*/
+ 29     width:300px;/*设置文字div的宽度和高度宽度要和pro父div的一样宽*/
+ 30     height:50px;
+ 31 
+ 32     -webkit-transition:all 0.2s ease-in 0;/*动画效果*/
+ 33     background-image:linear-gradient(rgba(0,0,0,0.06),#000);/*背景渐变效果*/
+ 34     bottom:-2px;/* 让隐藏的文字div下移动让文字div距离他的父div的底部有2px的缝隙因为图片都有2px的间隙，为了让他从图片底部出现，所以要写尽量比图片的间隔稍微大一点点*/
+ 35 }
+ 36 div.pro:hover div{
+ 37     bottom:50px;/*鼠标滑过让文字div距离父div底部向上有50px的缝隙*/
+ 38 }
+ 39 </style>
+ 40 </head>
+ 41 <body>
+ 42 <div id="mm">
+ 43 <div class="pro">
+ 44 <img src="images/img2.jpg">
+ 45 <div>产品中心下载</div>
+ 46 </div>
+ 47 <div class="pro">
+ 48 <img src="images/img2.jpg">
+ 49 <div>产品中心下载</div>
+ 50 </div>
+ 51 <div class="pro">
+ 52 <img src="images/img2.jpg">
+ 53 <div>产品中心下载</div>
+ 54 </div>
+ 55 <div class="pro">
+ 56 <img src="images/img2.jpg">
+ 57 <div>产品中心下载</div>
+ 58 </div>
+ 59 <div class="pro">
+ 60 <img src="images/img2.jpg">
+ 61 <div>产品中心下载</div>
+ 62 </div>
+ 63 <div class="pro">
+ 64 <img src="images/img2.jpg">
+ 65 <div>产品中心下载</div>
+ 66 </div>
+ 67 
+ 68 <div class="pro">
+ 69 <img src="images/img2.jpg">
+ 70 <div>产品中心下载</div>
+ 71 </div>
+ 72 <div class="pro">
+ 73 <img src="images/img2.jpg">
+ 74 <div>产品中心下载</div>
+ 75 </div>
+ 76 <div class="pro">
+ 77 <img src="images/img2.jpg">
+ 78 <div>产品中心下载</div>
+ 79 </div>
+ 80 <div class="pro">
+ 81 <img src="images/img2.jpg">
+ 82 <div>产品中心下载</div>
+ 83 </div>
+ 84 <div class="pro">
+ 85 <img src="images/img2.jpg">
+ 86 <div>产品中心下载</div>
+ 87 </div>
+ 88 <div class="pro">
+ 89 <img src="images/img2.jpg">
+ 90 <div>产品中心下载</div>
+ 91 </div>
+ 92 <div class="pro">
+ 93 <img src="images/img2.jpg">
+ 94 <div>产品中心下载</div>
+ 95 </div>
+ 96 <div class="pro">
+ 97 <img src="images/img2.jpg">
+ 98 <div>产品中心下载</div>
+ 99 </div>
+100 <div class="pro">
+101 <img src="images/img2.jpg">
+102 <div>产品中心下载</div>
+103 </div>
+104 
+105 
+106 </div>
+107 
+108 </body>
+109 </html>

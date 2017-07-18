@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="vue.js"></script>
+	</head>
+
+	<body>
+
+		<div id="w">
+			{{ n }}
+			<span v-for="n in 10">{{ n }}</span>
+		</div>
+		<script>
+			var w = new Vue({
+				el: "#w",
+				data: {
+					n: 2
+				}
+			})
+		</script>
+
+		<ul id="ex">
+			<li v-for="(item,index) in items">
+				{{parentM}} - {{index}} - {{item.me}}
+			</li>
+		</ul>
+		<script>
+			var ex = new Vue({
+				el: "#ex",
+				data: {
+					parentM: "shshs",
+					items: [{
+							me: 'ss'
+						},
+						{
+							me: 'qq'
+						},
+					]
+				}
+			})
+		</script>
+		<ul id="ex2">
+			<li v-for="(item,index) of items">
+				{{parentM}} - {{index}} - {{item.me}}
+			</li>
+		</ul>
+		<script>
+			var ex = new Vue({
+				el: "#ex2",
+				data: {
+					parentM: "shshs",
+					items: [{
+							me: 'ss'
+						},
+						{
+							me: 'qq'
+						},
+					]
+				}
+			})
+		</script>
+
+		<ul id="ex3">
+			<template v-for="item in items">
+				<li>{{item.msg}}</li>
+			</template>
+		</ul>
+		<script>
+			var ex = new Vue({
+				el: "#ex3",
+				data: {
+					items: [{
+							msg: 'ss'
+						},
+						{
+							msg: 'qq'
+						},
+					]
+				}
+			})
+		</script>
+		<ul id="re">
+			<li v-for="val in obj">
+				{{ val }}
+			</li>
+		</ul>
+		<script>
+			new Vue({
+				el: '#re',
+				data: {
+					obj: {
+						q: 'John',
+						w: 'Doe',
+						e: 30
+					}
+				}
+			})
+		</script>
+		<div id="sss">
+			<input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+			<label for="jack">Jack</label>
+			<input type="checkbox" id="john" value="John" v-model="checkedNames">
+			<label for="john">John</label>
+			<input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+			<label for="mike">Mike</label>
+			<br>
+			<span>Checked names: {{ checkedNames }}</span>
+		</div>
+		<script>
+			new Vue({
+				el: '#sss',
+				data: {
+					checkedNames: []
+				}
+			})
+		</script>
+
+		
+		</script>
+	</body>
+
+</html>
